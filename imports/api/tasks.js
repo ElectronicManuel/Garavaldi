@@ -17,6 +17,10 @@ if (Meteor.isServer) {
     });
 }
 
+if (Meteor.isClient) {
+    Meteor.subscribe('tasks');
+}
+
 Meteor.methods({
     'tasks.insert'(text) {
         check(text, String);
