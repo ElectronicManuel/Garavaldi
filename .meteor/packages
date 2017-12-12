@@ -23,4 +23,5 @@ accounts-google
 zimme:active-route
 kadira:flow-router
 kadira:blaze-layout
-fourseven:scss
+jquery
+materialize:materialize
