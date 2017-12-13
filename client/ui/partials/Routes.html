@@ -1,0 +1,8 @@
+<template name="Routes">
+    {{#each nav in navigations}}
+    <li class="{{isActiveRoute nav.name}}">
+        <a href="{{ nav.route }}">{{ nav.displayName }}{{#if nav.icon }}
+            <i class="material-icons">{{ nav.icon }}</i> {{/if}}</a>
+    </li>
+    {{/each}}
+</template>
