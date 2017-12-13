@@ -30,3 +30,4 @@ useraccounts:core
 useraccounts:flow-routing
 useraccounts:materialize
 meteortoys:allthings
+service-configuration

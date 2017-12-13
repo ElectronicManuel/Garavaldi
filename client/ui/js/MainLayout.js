@@ -1,4 +1,4 @@
-Template.MainLayout.helpers({
+Template.NavigationBar.helpers({
     username: () => {
         if(Meteor.user() && Meteor.user().username) {
             return Meteor.user().username;

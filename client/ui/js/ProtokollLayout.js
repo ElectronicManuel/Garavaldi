@@ -32,8 +32,14 @@ var arbeiten = [
     {
         name: "Account System implementieren",
         schule: false,
-        datum: '13.12.17',
+        datum: '12.12.17',
         dauer: 3
+    },
+    {
+        name: "Google Login implementieren",
+        schule: false,
+        datum: '13.12.17',
+        dauer: 2
     }
 ];
 
