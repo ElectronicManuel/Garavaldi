@@ -40,6 +40,12 @@ var arbeiten = [
         schule: false,
         datum: '13.12.17',
         dauer: 2
+    },
+    {
+        name: "Medien Liste erstellen und Insert ohne Datei ermöglichen",
+        schule: true,
+        datum: '14.12.17',
+        dauer: 2
     }
 ];
 

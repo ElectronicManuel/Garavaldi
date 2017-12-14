@@ -23,7 +23,6 @@ zimme:active-route
 kadira:flow-router
 kadira:blaze-layout
 jquery
-materialize:materialize
 arillo:flow-router-helpers
 google-config-ui
 useraccounts:core
@@ -33,3 +32,6 @@ meteortoys:allthings
 service-configuration
 aldeed:collection2
 aldeed:autoform
+insecure
+autopublish
+materialize:materialize
