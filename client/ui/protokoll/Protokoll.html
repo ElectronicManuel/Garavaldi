@@ -10,22 +10,22 @@
             </tr>
         </thead>
         <tbody>
-            {{#each arbeit in arbeiten }}
+            {{#each arbeiten }}
             <tr class="
-            {{#if arbeit.schule }}
+            {{#if schule }}
                 blue lighten-2
             {{else}}
                 teal lighten-3
             {{/if}}">
-                <td>{{ arbeit.name }}</td>
-                <td>{{ arbeit.datum }}</td>
+                <td>{{ name }}</td>
+                <td>{{ datum }}</td>
 
-                {{#if arbeit.schule }}
+                {{#if schule }}
                 <td>Schule</td>
                 {{else}}
                 <td>Zuhause</td>
                 {{/if}}
-                <td>{{ arbeit.dauer }} Stunden</td>
+                <td>{{ dauer }} Stunden</td>
             </tr>
             {{/each}}
 

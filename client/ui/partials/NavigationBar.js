@@ -6,12 +6,6 @@ var navs = [
         icon: null
     },
     {
-        name: 'protokoll',
-        route: '/protokoll',
-        displayName: 'Protokoll',
-        icon: null
-    },
-    {
         name: 'upload',
         route: '/upload',
         displayName: '',

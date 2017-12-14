@@ -5,7 +5,7 @@ Template.NavigationBar.helpers({
         } else if(Meteor.user() && Meteor.user().profile) {
             return Meteor.user().profile.name;
         } else {
-            return 'Gast';
+            return '';
         }
     }
 });
