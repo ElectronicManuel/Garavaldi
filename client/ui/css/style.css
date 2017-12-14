@@ -1,0 +1,14 @@
+.page-flexbox-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.total {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}

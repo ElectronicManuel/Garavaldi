@@ -1,0 +1,25 @@
+<template name="NavigationBar">
+    <div class="navbar-fixed">
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center">Media Sharing</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <!-- Menü für grosse Bildschirme -->
+                <ul class="left hide-on-med-and-down">
+                    {{> Routes}}
+                </ul>
+                <ul class="right">
+                    <li>{{ username }}</li>
+                    <li>{{> atNavButton}}</li>
+                </ul>
+                <!-- Mobile Menü -->
+                <ul class="side-nav" id="mobile-demo">
+                    {{> Routes}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</template>

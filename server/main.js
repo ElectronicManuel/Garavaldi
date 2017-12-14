@@ -1,6 +1,14 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/tasks.js';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+    // code to run on server at startup
+    ServiceConfiguration.configurations.remove({
+        service: "google"
+    });
+    ServiceConfiguration.configurations.insert({
+        service: "google",
+        clientId: Meteor.settings.google.appId,
+        loginStyle: "popup",
+        secret: Meteor.settings.google.secret
+    });
 });

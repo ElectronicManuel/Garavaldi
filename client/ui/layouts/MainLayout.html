@@ -1,0 +1,21 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/favicon.png">
+    <title>Media Sharing</title>
+</head>
+
+<template name="MainLayout">
+    <div class="page-flexbox-wrapper">
+        <header>
+            {{> NavigationBar }}
+        </header>
+        <main>
+            <div class="container">
+                {{> Template.dynamic template=main}}
+            </div>
+        </main>
+        <footer class="page-footer">
+            {{> Footer }}
+        </footer>
+    </div>
+</template>
