@@ -1,0 +1,17 @@
+.thumbnail {
+    display: inline-block !important;
+}
+
+.thumbnailContainer {
+    width: 100% !important;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.imageViewer img {
+    margin-left: auto;
+    margin-right: auto;
+}

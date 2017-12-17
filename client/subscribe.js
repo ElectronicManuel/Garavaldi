@@ -1,2 +1,2 @@
-Meteor.subscribe('medias');
+Meteor.subscribe('posts');
 Meteor.subscribe('images');

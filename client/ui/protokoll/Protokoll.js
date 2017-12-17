@@ -42,10 +42,16 @@ var arbeiten = [
         dauer: 2
     },
     {
-        name: "Medien Liste erstellen und Insert ohne Datei ermöglichen",
+        name: "Bilder Liste erstellen und Insert ohne Datei ermöglichen",
         schule: true,
         datum: '14.12.17',
         dauer: 2
+    },
+    {
+        name: "Bild hochladen und anzeigen Implementierung Teil 1",
+        schule: false,
+        datum: '17.12.17',
+        dauer: 5
     }
 ];
 

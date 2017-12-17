@@ -1,5 +1,5 @@
-AutoForm.addHooks('insertMediaForm', {
+AutoForm.addHooks('insertPostsForm', {
     onSuccess: (formType, result) => {
-        Materialize.toast('Medium hinzugefügt', 4000);
+        Materialize.toast('Bild hochgeladen', 4000);
     }
 });

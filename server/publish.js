@@ -1,12 +1,12 @@
-Meteor.publish('medias', () => {
-    return Medias.find({});
+Meteor.publish('posts', () => {
+    return Posts.find({});
 });
 
 Meteor.publish('images', () => {
     return Images.collection.find({});
 });
 
-Medias.allow({
+Posts.allow({
     insert: (userId, doc) => {
         if(userId !== undefined) {
             return true;
