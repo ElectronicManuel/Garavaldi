@@ -1,8 +1,10 @@
 <template name="HomeLayout">
     <h1>Home</h1>
-    {{#each medias}}
-        <p>{{ title }}</p>
-    {{else}}
-        <p>Keine Medien vorhanden</p>
-    {{/each}}
+    <div class="mediaThumbnailContainer row">
+        {{#each medias}}
+            {{> MediaThumbnail }}
+        {{else}}
+            <p>Keine Medien vorhanden</p>
+        {{/each}}
+    </div>
 </template>

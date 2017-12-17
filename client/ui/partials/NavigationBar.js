@@ -8,7 +8,7 @@ var navs = [
     {
         name: 'upload',
         route: '/upload',
-        displayName: '',
+        displayName: 'Hochladen',
         icon: 'file_upload'
     }
 ];
