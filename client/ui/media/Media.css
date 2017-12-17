@@ -1,0 +1,12 @@
+.mediaThumbnail {
+    display: inline-block !important;
+}
+
+.mediaThumbnailContainer {
+    width: 100% !important;
+}
+
+.mediaThumbnail img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,7 @@
+.has-error .help-block {
+    color: #F44336 !important;
+}
+
+.has-error input {
+    border-bottom: 1px solid #F44336 !important;
+}
