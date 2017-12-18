@@ -1,10 +1,4 @@
 <template name="HomeLayout">
     <h1>Home</h1>
-    <div class="thumbnailContainer row">
-        {{#each post in posts}}
-            {{> Thumbnail }}
-        {{else}}
-            <p>Keine Bilder vorhanden</p>
-        {{/each}}
-    </div>
+    {{> ImageContainer }}
 </template>

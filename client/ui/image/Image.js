@@ -18,3 +18,9 @@ Template.Viewer.helpers(imageHelpers);
 Template.Viewer.onRendered(() => {
     $('.materialboxed').materialbox();
 });
+
+Template.ImageContainer.helpers({
+    posts: () => {
+        return Posts.find({}, {sort: {createdAt: -1}});
+    }
+});

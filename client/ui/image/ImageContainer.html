@@ -1,0 +1,9 @@
+<template name="ImageContainer">
+    <div class="thumbnailContainer row">
+        {{#each post in posts}}
+            {{> Thumbnail post=post}}
+        {{else}}
+            <p>Keine Bilder vorhanden</p>
+        {{/each}}
+    </div>
+</template>

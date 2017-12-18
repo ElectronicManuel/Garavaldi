@@ -1,11 +1,11 @@
 <template name="ViewHandler">
-    {{#if viewable}}
+    {{#if post != undefined }}
+        {{> Viewer post=post }}
+    {{else}}
         {{#if private }}
             <h1 class="error">Dieser Post ist privat!</h1>
         {{else}}
             <h1 class="error">Kein Post gefunden</h1>   
         {{/if}}
-    {{else}}
-        {{> Viewer }}
     {{/if}}
 </template>
