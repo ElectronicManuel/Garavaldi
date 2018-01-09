@@ -39,7 +39,6 @@ ecmascript-runtime-server@0.5.0
 ejson@1.1.0
 email@1.2.3
 es5-shim@4.6.15
-fourseven:scss@4.5.4
 geojson-utils@1.0.10
 google-config-ui@1.0.0
 google-oauth@1.2.5
@@ -55,7 +54,6 @@ launch-screen@1.1.1
 livedata@1.0.18
 localstorage@1.2.0
 logging@1.1.19
-materialize:materialize@0.100.2
 mdg:validation-error@0.2.0
 meteor@1.8.2
 meteor-base@1.2.0

@@ -32,7 +32,6 @@ meteortoys:allthings
 service-configuration
 aldeed:collection2
 aldeed:autoform
-materialize:materialize
 momentjs:moment
 ostrio:files
 ostrio:autoform-files
