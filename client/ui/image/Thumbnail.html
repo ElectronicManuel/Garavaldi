@@ -1,6 +1,8 @@
 <template name="Thumbnail">
     <div class="thumbnail col s12 m4 l3">
-        <a href="{{ link }}"><img src="{{ file.link }}" alt="{{ file.name }}" /></a>
+        <div class="thumbnailImageContainer">
+            <a href="{{ link }}"><img src="{{ file.link }}" alt="{{ file.name }}" /></a>
+        </div>
         <a href="{{ link }}"><h5 class="truncate">{{ post.title }} </h5></a>
         <ul>
             <li class="truncate">{{ post.description }}</li>

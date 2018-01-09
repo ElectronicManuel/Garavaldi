@@ -1,17 +1,34 @@
 .thumbnail {
     display: inline-block !important;
+    height: 30vh !important;
 }
 
 .thumbnailContainer {
     width: 100% !important;
 }
 
+.thumbnailImageContainer {
+    height: 70% !important;
+}
+
 .thumbnail img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .imageViewer img {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1%;
+}
+
+.metasection {
+    margin-bottom: 0 !important;
+    background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 255)) !important;
+}
+
+.description {
+    background-color: white !important;
+    border: 1px solid rgb(212, 212, 212) !important;
 }

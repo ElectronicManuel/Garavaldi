@@ -5,3 +5,7 @@
 .has-error input {
     border-bottom: 1px solid #F44336 !important;
 }
+
+.upload-posts-container {
+    margin-bottom: 1%;
+}

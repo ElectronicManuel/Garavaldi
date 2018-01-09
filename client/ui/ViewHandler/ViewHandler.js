@@ -5,8 +5,12 @@ Template.ViewHandler.helpers({
     }
 });
 
+Template.ViewHandler.onRendered(() => {
+    this.queried = false;
+});
+
 function findPost() {
-    if(!this.queried) {
+    //if(!this.queried) {
         var id = FlowRouter.getQueryParam('i');
         query = Posts.findOne({ _id: id });
     
@@ -31,5 +35,5 @@ function findPost() {
         console.log('Post from ViewHandler: ', this.post);
         // Flag setzen um erneutes abfragen zu vermeiden
         this.queried = true;
-    }
+    //}
 }

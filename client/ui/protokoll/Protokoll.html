@@ -1,40 +1,42 @@
 <template name="ProtokollLayout">
-    <h1>Arbeitsprotokoll - {{ totalZeit }} Stunden total</h1>
-    <table class="striped">
-        <thead>
-            <tr>
-                <th>Tätigkeit</th>
-                <th>Datum</th>
-                <th>Ort</th>
-                <th>Aufwand</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each arbeiten }}
-            <tr class="
-            {{#if schule }}
-                blue lighten-2
-            {{else}}
-                teal lighten-3
-            {{/if}}">
-                <td>{{ name }}</td>
-                <td>{{ datum }}</td>
-
+    <div class="container">
+        <h1>Arbeitsprotokoll - {{ totalZeit }} Stunden total</h1>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Tätigkeit</th>
+                    <th>Datum</th>
+                    <th>Ort</th>
+                    <th>Aufwand</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each arbeiten }}
+                <tr class="
                 {{#if schule }}
-                <td>Schule</td>
+                    blue lighten-2
                 {{else}}
-                <td>Zuhause</td>
-                {{/if}}
-                <td>{{ dauer }} Stunden</td>
-            </tr>
-            {{/each}}
+                    teal lighten-3
+                {{/if}}">
+                    <td>{{ name }}</td>
+                    <td>{{ datum }}</td>
 
-            <tr class="total">
-                <td>Total</td>
-                <td></td>
-                <td></td>
-                <td>{{ totalZeit }}</td>
-            </tr>
-        </tbody>
-    </table>
+                    {{#if schule }}
+                    <td>Schule</td>
+                    {{else}}
+                    <td>Zuhause</td>
+                    {{/if}}
+                    <td>{{ dauer }} Stunden</td>
+                </tr>
+                {{/each}}
+
+                <tr class="total">
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ totalZeit }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
