@@ -8,6 +8,7 @@ imageHelpers = {
     },
     file: () => {
         toReturn = Images.findOne({ _id: Template.currentData().post.picture });
+        console.log('Image: ', toReturn);
         return toReturn;
     }
 };
