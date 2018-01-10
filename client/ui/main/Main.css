@@ -25,5 +25,9 @@ select {
 }
 
 .error {
-    color: 
+    color: red;
+}
+
+.btn {
+    text-transform: none !important;
 }

@@ -21,6 +21,7 @@ Template.Viewer.helpers(imageHelpers);
 
 Template.Viewer.onRendered(() => {
     $('.materialboxed').materialbox();
+    $('.tooltipped').tooltip({delay: 50});
 });
 
 Template.ImageContainer.helpers({
