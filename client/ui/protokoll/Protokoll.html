@@ -4,28 +4,23 @@
         <table class="striped">
             <thead>
                 <tr>
-                    <th>Tätigkeit</th>
-                    <th>Datum</th>
                     <th>Ort</th>
+                    <th>Datum</th>
+                    <th>Tätigkeit</th>
                     <th>Aufwand</th>
                 </tr>
             </thead>
             <tbody>
                 {{#each arbeiten }}
-                <tr class="
-                {{#if schule }}
-                    blue lighten-2
-                {{else}}
-                    teal lighten-3
-                {{/if}}">
+                <tr class="">
+                    {{#if schule }}
+                    <td><i class="material-icons left">library_books</i>Schule</td>
+                    {{else}}
+                    <td><i class="material-icons left">home</i>Zuhause</td>
+                    {{/if}}
+
                     <td>{{ name }}</td>
                     <td>{{ datum }}</td>
-
-                    {{#if schule }}
-                    <td>Schule</td>
-                    {{else}}
-                    <td>Zuhause</td>
-                    {{/if}}
                     <td>{{ dauer }} Stunden</td>
                 </tr>
                 {{/each}}

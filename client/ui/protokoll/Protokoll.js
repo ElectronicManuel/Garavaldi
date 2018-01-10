@@ -58,6 +58,12 @@ var arbeiten = [
         schule: false,
         datum: '09.01.18',
         dauer: 1.5
+    },
+    {
+        name: "Bild hochladen und anzeigen Implementierung Teil 3",
+        schule: false,
+        datum: '10.01.18',
+        dauer: 1
     }
 ];
 

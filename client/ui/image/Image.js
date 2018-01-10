@@ -10,6 +10,9 @@ imageHelpers = {
         toReturn = Images.findOne({ _id: Template.currentData().post.picture });
         console.log('Image: ', toReturn);
         return toReturn;
+    },
+    isOwner: () => {
+        return Meteor.user()._id == Template.currentData().post.owner;
     }
 };
 
