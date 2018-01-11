@@ -1,6 +1,6 @@
 .thumbnail {
     display: inline-block !important;
-    height: 30vh !important;
+    margin-bottom: 2% !important;
 }
 
 .thumbnailContainer {
@@ -12,9 +12,10 @@
 }
 
 .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 20vh !important;
+    object-fit: cover !important;
 }
 
 .material-placeholder {
@@ -24,8 +25,8 @@
 }
 
 .metasection {
-    margin-bottom: 0 !important;
-    /*background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 255)) !important;*/
+    padding-bottom: 2%;
+    background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 255)) !important;
 }
 
 .description {
@@ -36,4 +37,8 @@
 .postManagement {
     background-color: white !important;
     border: 1px solid rgb(240, 240, 240) !important;
+}
+
+.no-margin {
+    margin: 0 !important;
 }

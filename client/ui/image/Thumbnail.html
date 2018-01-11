@@ -1,11 +1,15 @@
 <template name="Thumbnail">
     <div class="thumbnail col s12 m4 l3">
         <div class="thumbnailImageContainer">
-            <a href="{{ link }}"><img src="{{ file.link }}" alt="{{ file.name }}" /></a>
+            <a href="{{ link }}">
+                <img src="{{ file.link }}" alt="{{ file.name }}" />
+            </a>
         </div>
-        <a href="{{ link }}"><h5 class="truncate">{{ post.title }} </h5></a>
-        <ul>
-            <li class="truncate">{{ post.description }}</li>
+        <a href="{{ link }}">
+            <h5 class="truncate">{{ post.title }} </h5>
+        </a>
+        <span class="truncate">{{ post.description }}</span>
+        <ul class="no-margin grey-text">
             <li>von {{ post.ownerName }}</li>
             <li>{{ since }}</li>
         </ul>
