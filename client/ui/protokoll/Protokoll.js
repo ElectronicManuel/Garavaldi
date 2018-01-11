@@ -64,6 +64,12 @@ var arbeiten = [
         schule: false,
         datum: '10.01.18',
         dauer: 1
+    },
+    {
+        name: "CSS Bugfixes",
+        schule: true,
+        datum: '11.01.18',
+        dauer: 3
     }
 ];
 
