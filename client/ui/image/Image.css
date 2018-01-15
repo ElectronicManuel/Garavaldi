@@ -13,7 +13,7 @@
 
 .thumbnail img {
     width: 100% !important;
-    height: 15vh !important;
+    height: auto !important;
     object-fit: cover !important;
 }
 
@@ -26,6 +26,7 @@
 .metasection {
     padding-bottom: 2%;
     background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 255)) !important;
+    word-wrap: break-word !important;
 }
 
 .description {
