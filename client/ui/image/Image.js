@@ -30,7 +30,7 @@ Template.ImageContainer.helpers({
 });
 
 Template.Viewer.events({
-    'click .delete': function (e) {
+    'click .delete': (e) => {
         e.preventDefault();
 
         var postId = Template.currentData().post._id;
@@ -61,6 +61,13 @@ Template.Viewer.events({
                     }
                 });
             }
+        });
+    },
+    'click .changelock': (e) => {
+        var postId = Template.currentData().post._id;
+        var postPrivate = Template.currentData().post.private;
+        Posts.update({ _id: postId }, { $set: { private: !postPrivate }}, () => {
+            $('.tooltipped').tooltip({ delay: 50 });
         });
     }
 });

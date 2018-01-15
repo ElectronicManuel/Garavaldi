@@ -24,7 +24,13 @@
                         </div>
                     </li>
 
-                    {{> Routes}}
+                    <div class="black-text">
+                            {{> Routes}}
+                            
+                            {{#if isHome }}
+                                {{> SideBar }}
+                            {{/if}}
+                    </div>
 
                 </ul>
             </div>

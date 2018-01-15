@@ -3,11 +3,8 @@
         {{> Viewer post=post }}
     {{else}}
     <div class="container">
-        {{#if private }}
-            <h1 class="error">Dieser Post ist privat!</h1>
-        {{else}}
-            <h1 class="error">Kein Post gefunden</h1>   
-        {{/if}}
+        <h1>Kein Post gefunden</h1>
+        <img src="/notfound_image.png" class="responsive-img" alt="Nicht gefunden" />
     </div>
     {{/if}}
 </template>

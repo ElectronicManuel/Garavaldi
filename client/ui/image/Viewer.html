@@ -11,9 +11,15 @@
                     <button class="btn-large red tooltipped delete" data-tooltip="Bild löschen">
                         <i class="large material-icons white-text">delete_forever</i>
                     </button>
+                    <button class="btn-large blue tooltipped changelock" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
+                        <i class="large material-icons white-text">{{#if post.private}}lock_open{{else}}lock_outline{{/if}}</i>
+                    </button>
                 </div>
             {{/if}}
-            <h1 class="col s12">{{ post.title }}</h1>
+            <h1 class="col s12">
+                    {{ post.title }}
+                    {{#if post.private }}<i class="medium material-icons left">lock_outline</i>{{/if}}
+            </h1>
             <div class="description col s12">
                 <p class="">{{ post.description }}</p>
             </div>

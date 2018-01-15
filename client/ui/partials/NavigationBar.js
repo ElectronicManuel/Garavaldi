@@ -19,6 +19,13 @@ Template.Routes.helpers({
     }
 });
 
+Template.NavigationBar.helpers({
+    isHome: () => {
+        console.log('Route = home', FlowRouter.getRouteName() == 'home');
+        return FlowRouter.getRouteName() == 'home';
+    }
+});
+
 Template.NavigationBar.onRendered(() => {
     $(".button-collapse").sideNav();
 });

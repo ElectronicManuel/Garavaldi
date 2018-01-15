@@ -82,6 +82,12 @@ var arbeiten = [
         schule: false,
         datum: '15.01.18',
         dauer: 1
+    },
+    {
+        name: "Private Posts implementieren",
+        schule: false,
+        datum: '15.01.18',
+        dauer: 1
     }
 ];
 

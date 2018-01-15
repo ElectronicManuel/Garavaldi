@@ -1,5 +1,5 @@
 Meteor.publish('posts', () => {
-    return Posts.find({});
+    return Posts.find({ $or: [{private: false}, {owner: Meteor.userId() }] });
 });
 
 Meteor.publish('images', () => {
@@ -15,6 +15,13 @@ Posts.allow({
         }
     },
     remove: (userId, doc) => {
+        if(userId == doc.owner) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+    update: (userId, doc) => {
         if(userId == doc.owner) {
             return true;
         } else {

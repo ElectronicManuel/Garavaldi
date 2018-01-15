@@ -13,8 +13,7 @@
 
 .thumbnail img {
     width: 100% !important;
-    height: 100% !important;
-    max-height: 20vh !important;
+    height: 15vh !important;
     object-fit: cover !important;
 }
 

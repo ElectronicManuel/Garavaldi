@@ -6,11 +6,16 @@
             </a>
         </div>
         <a href="{{ link }}">
-            <h5 class="truncate">{{ post.title }} </h5>
+            <h5 class="truncate">
+                {{ post.title }}
+            </h5>
         </a>
         <span class="truncate">{{ post.description }}</span>
         <ul class="no-margin grey-text">
-            <li>von {{ post.ownerName }}</li>
+            <li>von {{ post.ownerName }}
+                {{#if post.private }}
+                    <i class="material-icons right black-text">lock</i>
+                {{/if}}</li>
             <li>{{ since }}</li>
         </ul>
     </div>
