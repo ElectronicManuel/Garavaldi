@@ -1,5 +1,7 @@
 AutoForm.addHooks('insertPostsForm', {
-    onSuccess: (formType, result) => {
-        Materialize.toast('Bild hochgeladen', 4000);
+    onSuccess: function(formType, result) {
+        var id = this.docId;
+        FlowRouter.go('/view', null, {i: id });
+        swal('Bild hochgeladen', '', 'success');
     }
 });

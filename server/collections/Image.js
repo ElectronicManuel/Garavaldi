@@ -38,11 +38,11 @@ if (s3Conf && s3Conf.key && s3Conf.secret && s3Conf.bucket && s3Conf.region) {
 
     // Declare the Meteor file collection on the Server
     Images = new FilesCollection({
-        debug: true, // Change to `true` for debugging
+        debug: false, // Change to `true` for debugging
         storagePath: 'assets/app/uploads/uploadedFiles',
         collectionName: 'Images',
         // Disallow Client to execute remove, use the Meteor.method
-        allowClientCode: false,
+        allowClientCode: true,
 
         // Start moving files to AWS:S3
         // after fully received by the Meteor server

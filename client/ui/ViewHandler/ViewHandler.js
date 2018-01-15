@@ -16,7 +16,6 @@ function findPost() {
     
         // Falls kein Post unter der ID gefunden wird
 
-        console.log(query);
         if(query) {
             // Falls der Post privat ist, wird ein flag gesetzt und der post nur dann übernommen, wenn der besitzer ihn anfragt
             if (query.private) {
@@ -32,7 +31,6 @@ function findPost() {
         } else {
             this.post = undefined;
         }
-        console.log('Post from ViewHandler: ', this.post);
         // Flag setzen um erneutes abfragen zu vermeiden
         this.queried = true;
     //}

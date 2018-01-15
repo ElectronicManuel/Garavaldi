@@ -70,6 +70,18 @@ var arbeiten = [
         schule: true,
         datum: '11.01.18',
         dauer: 3
+    },
+    {
+        name: "Posts löschen implementieren",
+        schule: false,
+        datum: '15.01.18',
+        dauer: 1
+    },
+    {
+        name: "Bessere Dialoge hinzufügen",
+        schule: false,
+        datum: '15.01.18',
+        dauer: 1
     }
 ];
 
