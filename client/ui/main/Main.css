@@ -33,3 +33,12 @@ select {
 .btn {
     text-transform: none !important;
 }
+
+.iconButton {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.inline-icon {
+    vertical-align: middle !important;
+}
