@@ -11,7 +11,7 @@ imageHelpers = {
         return toReturn;
     },
     isOwner: () => {
-        return Meteor.user()._id == Template.currentData().post.owner;
+        return Meteor.userId() == Template.currentData().post.owner;
     },
     likes: () => {
         var post = Template.currentData().post;
@@ -19,6 +19,13 @@ imageHelpers = {
             return post.likes.length;
         }
         return 0;
+    },
+    hasLiked: () => {
+        var post = Template.currentData().post;
+        if(post && post.likes) {
+            return post.likes.indexOf(Meteor.userId()) > -1;
+        }
+        return false;
     }
 };
 
@@ -37,6 +44,12 @@ Template.Viewer.onDestroyed(() => {
 
 Template.ImageContainer.helpers({
     posts: () => {
+        var sort = Session.get('sort');
+        if(sort == 'date') {
+            return Posts.find({}, { sort: { createdAt: -1 } });
+        } else if(sort == 'likes') {
+            return Posts.find({}, { sort: { likes: -1 } });
+        }
         return Posts.find({}, { sort: { createdAt: -1 } });
     }
 });
@@ -81,5 +94,32 @@ Template.Viewer.events({
         Posts.update({ _id: postId }, { $set: { private: !postPrivate }}, () => {
             $('.tooltipped').tooltip({ delay: 50 });
         });
+    },
+    'click .likeBtn': (e) => {
+        var postId = Template.currentData().post._id;
+        var hasLiked = Template.Viewer.__helpers.get('hasLiked').call();
+        if(!hasLiked) {
+            Meteor.call('posts.like', {postId: postId, userId: Meteor.userId()}, (err, res) => {
+                if(err) {
+                    if(err.error && typeof err.error == 'string' && err.error.indexOf('posts.like') > -1) {
+                        swal('Ups', err.reason, 'warning');
+                    } else {
+                        swal('Fehler', err.message, 'error');
+                    }
+                }
+                
+            });
+        } else {
+            Meteor.call('posts.unlike', {postId: postId, userId: Meteor.userId()}, (err, res) => {
+                if(err) {
+                    if(err.error && typeof err.error == 'string' && err.error.indexOf('posts.unlike') > -1) {
+                        swal('Ups', err.reason, 'warning');
+                    } else {
+                        swal('Fehler', err.message, 'error');
+                    }
+                }
+            });
+        }
+        
     }
 });

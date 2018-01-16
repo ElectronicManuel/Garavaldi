@@ -1,0 +1,33 @@
+<template name="SettingsBarHome">
+    <div class="settingsBar">
+        <h2>Sortieren</h2>
+        <span>Current: {{ sortName }}</span>
+        <ul>
+            <li>
+                <input class="with-gap" name="sort" type="radio" id="date" checked="{{#if currentSort 'date' }}checked{{/if}}" />
+                <label for="date">Datum</label>
+            </li>
+            <li>
+                <input class="with-gap" name="sort" type="radio" id="likes" checked="{{#if currentSort 'likes' }}checked{{/if}}" />
+                <label for="likes">Likes</label>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<template name="SettingsBarSide">
+    <div class="settingsBar">
+        <h2>Sortieren</h2>
+        <span>Current: {{ sortName }}</span>
+        <ul>
+            <li>
+                <input class="with-gap" name="sort" type="radio" id="date" checked="{{#if currentSort 'date' }}checked{{/if}}" />
+                <label for="date">Datum</label>
+            </li>
+            <li>
+                <input class="with-gap" name="sort" type="radio" id="likes" checked="{{#if currentSort 'likes' }}checked{{/if}}" />
+                <label for="likes">Likes</label>
+            </li>
+        </ul>
+    </div>
+</template>

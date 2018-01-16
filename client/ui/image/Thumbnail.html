@@ -14,9 +14,12 @@
             <span class="truncate">{{ post.description }}</span>
             <ul class="no-margin grey-text">
                 <li class="row">
-                    <span class="col s10 truncate nopadding">von {{ post.ownerName }}</span>
-                    <span class="col s2">
-                        <span class="truncate">{{ likes }} l.</span>
+                    <span class="col s10 m8 l8 truncate nopadding">von {{ post.ownerName }}</span>
+                    <span class="col s2 m4 l4">
+                        <div class="likeCounter right">
+                            <span class="black-text">{{ likes }}</span>
+                            <i class="tiny inline-icon material-icons {{#if hasLiked }}red{{else}}black{{/if}}-text">{{#if hasLiked }}favorite{{else}}favorite{{/if}}</i>
+                        </div>
                     </span>
                 </li>
                 <li class="row">
@@ -25,7 +28,7 @@
                     </span>
                     <span class="col s2">
                         {{#if post.private }}
-                            <i class="material-icons right black-text">lock</i>
+                            <i class="material-icons right indigo-text text-darken-4">lock</i>
                         {{/if}}
                     </span>
                 </li>

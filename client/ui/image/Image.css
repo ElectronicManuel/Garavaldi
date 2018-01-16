@@ -1,6 +1,6 @@
 .thumbnail {
     display: inline-block !important;
-    margin-bottom: 2% !important;
+    margin-top: 2% !important;
 }
 
 .thumbnail li {
@@ -21,7 +21,7 @@
 
 .thumbnail img {
     width: 100% !important;
-    height: auto !important;
+    height: 20vh !important;
     object-fit: cover !important;
 }
 
