@@ -28,6 +28,11 @@ Template.Viewer.helpers(imageHelpers);
 Template.Viewer.onRendered(() => {
     $('.materialboxed').materialbox();
     $('.tooltipped').tooltip({ delay: 50 });
+    $('main').addClass('viewer');
+});
+
+Template.Viewer.onDestroyed(() => {
+    $('main').removeClass('viewer');
 });
 
 Template.ImageContainer.helpers({
