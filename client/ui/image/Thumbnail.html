@@ -1,38 +1,24 @@
 <template name="Thumbnail">
-    <div class="thumbnail col s12 m4 l3">
-        <div class="thumbnailImageContainer">
-            <a href="{{ link }}">
-                <img src="{{ file.link }}" alt="{{ file.name }}" />
-            </a>
-        </div>
-        <div class="">
-            <a href="{{ link }}">
-                <h5 class="truncate">
-                    {{ post.title }}
-                </h5>
-            </a>
-            <span class="truncate">{{ post.description }}</span>
-            <ul class="no-margin grey-text">
-                <li class="row">
-                    <span class="col s10 m8 l8 truncate nopadding">von {{ post.ownerName }}</span>
-                    <span class="col s2 m4 l4">
-                        <div class="likeCounter right">
-                            <span class="black-text">{{ likes }}</span>
-                            <i class="tiny inline-icon material-icons {{#if hasLiked }}red{{else}}black{{/if}}-text">{{#if hasLiked }}favorite{{else}}favorite{{/if}}</i>
-                        </div>
-                    </span>
-                </li>
-                <li class="row">
-                    <span class="col s10 nopadding">
-                        {{ since }}
-                    </span>
-                    <span class="col s2">
-                        {{#if post.private }}
-                            <i class="material-icons right indigo-text text-darken-4">lock</i>
-                        {{/if}}
-                    </span>
-                </li>
-            </ul>
+    <div class="col s12 m4 l3">
+        <div class="card thumbnail {{#if isOwner }}self{{/if}}">
+            <div class="card-image">
+                <img src="{{ file.link }}" alt="{{ file.name }}">
+                <span class="card-title truncate">{{ post.title }}</span>
+            </div>
+            <div class="card-content">
+                <p class="truncate">{{ post.description }}</p>
+                <p class="grey-text">von {{ post.ownerName }}</p>
+                <p class="grey-text">{{ since }}</p>
+            </div>
+            <div class="card-action">
+                <a>
+                    <span class="black-text">{{ likes }}</span>
+                    <i class="tiny inline-icon material-icons {{#if hasLiked }}red{{else}}black{{/if}}-text">{{#if hasLiked }}favorite{{else}}favorite{{/if}}</i>
+                </a>
+                {{#if post.private }}
+                <a><i class="material-icons right black-text">lock</i></a>
+                {{/if}}
+            </div>
         </div>
     </div>
 </template>
