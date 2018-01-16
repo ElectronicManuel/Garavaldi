@@ -88,6 +88,18 @@ var arbeiten = [
         schule: false,
         datum: '15.01.18',
         dauer: 1
+    },
+    {
+        name: "'Mag ich' funktion",
+        schule: false,
+        datum: '16.01.18',
+        dauer: 1
+    },
+    {
+        name: "'Mag ich' / Private Posts klar visualisiert",
+        schule: false,
+        datum: '16.01.18',
+        dauer: 1
     }
 ];
 

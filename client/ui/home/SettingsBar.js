@@ -1,21 +1,48 @@
 var settingsBarHelpers = {
-    currentSort: (type) => {
-        return Session.get('sort') == type;
+    statusEquals: (name, type) => {
+        return Session.get('sort')[name] == type;
     },
-    sortName: () => {
-        return Session.get('sort');
+    settingsList: () => {
+        return [
+            {
+                name: 'createdAt',
+                display: 'Datum'
+            },
+            {
+                name: 'likeCount',
+                display: 'Likes'
+            }
+        ];
     }
 };
 
-var settingsBarEvents = {
-    'change input[name="sort"]': (event) => {
+var singleSettingEvents = {
+    'click .sortSetting': (event) => {
         event.preventDefault();
-        Session.set('sort', event.target.id);
+
+        var sortName = Template.currentData().name;
+
+        var sortObject = Session.get('sort');
+        var sortSetting = sortObject[sortName];
+
+        if(sortSetting == 0) {
+            sortSetting = -1;
+        }
+        else if(sortSetting == -1) {
+            sortSetting = 1;
+        }
+        else if(sortSetting == 1) {
+            sortSetting = 0;
+        }
+
+        sortObject[sortName] = sortSetting;
+        Session.set('sort', sortObject);
+
+        return false;
     }
 };
 
-Template.SettingsBarHome.helpers(settingsBarHelpers);
-Template.SettingsBarHome.events(settingsBarEvents);
+Template.SettingsBar.helpers(settingsBarHelpers);
 
-Template.SettingsBarSide.helpers(settingsBarHelpers);
-Template.SettingsBarSide.events(settingsBarEvents);
+Template.SingleSetting.events(singleSettingEvents);
+Template.SingleSetting.helpers(settingsBarHelpers);

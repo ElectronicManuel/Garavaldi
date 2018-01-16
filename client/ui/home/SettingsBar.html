@@ -1,33 +1,19 @@
-<template name="SettingsBarHome">
-    <div class="settingsBar">
-        <h2>Sortieren</h2>
-        <span>Current: {{ sortName }}</span>
-        <ul>
-            <li>
-                <input class="with-gap" name="sort" type="radio" id="date" checked="{{#if currentSort 'date' }}checked{{/if}}" />
-                <label for="date">Datum</label>
-            </li>
-            <li>
-                <input class="with-gap" name="sort" type="radio" id="likes" checked="{{#if currentSort 'likes' }}checked{{/if}}" />
-                <label for="likes">Likes</label>
-            </li>
-        </ul>
-    </div>
+<template name="SingleSetting">
+    <p class="sortSetting">
+        <span class="sortSetting inline-icon">{{ display }}</span>
+        <i class="material-icons inline-icon sortSetting left">
+            {{#if statusEquals name 0 }}check_box_outline_blank{{/if}}
+            {{#if statusEquals name -1 }}arrow_downward{{/if}}
+            {{#if statusEquals name 1 }}arrow_upward{{/if}}
+        </i>
+    </p>
 </template>
 
-<template name="SettingsBarSide">
+<template name="SettingsBar">
     <div class="settingsBar">
-        <h2>Sortieren</h2>
-        <span>Current: {{ sortName }}</span>
-        <ul>
-            <li>
-                <input class="with-gap" name="sort" type="radio" id="date" checked="{{#if currentSort 'date' }}checked{{/if}}" />
-                <label for="date">Datum</label>
-            </li>
-            <li>
-                <input class="with-gap" name="sort" type="radio" id="likes" checked="{{#if currentSort 'likes' }}checked{{/if}}" />
-                <label for="likes">Likes</label>
-            </li>
-        </ul>
+        <h3>Sortieren</h3>
+        {{#each settingsList}}
+            {{> SingleSetting }}
+        {{/each}}
     </div>
 </template>

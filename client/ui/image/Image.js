@@ -15,14 +15,14 @@ imageHelpers = {
     },
     likes: () => {
         var post = Template.currentData().post;
-        if(post && post.likes) {
+        if (post && post.likes) {
             return post.likes.length;
         }
         return 0;
     },
     hasLiked: () => {
         var post = Template.currentData().post;
-        if(post && post.likes) {
+        if (post && post.likes) {
             return post.likes.indexOf(Meteor.userId()) > -1;
         }
         return false;
@@ -44,13 +44,23 @@ Template.Viewer.onDestroyed(() => {
 
 Template.ImageContainer.helpers({
     posts: () => {
-        var sort = Session.get('sort');
-        if(sort == 'date') {
-            return Posts.find({}, { sort: { createdAt: -1 } });
-        } else if(sort == 'likes') {
-            return Posts.find({}, { sort: { likes: -1 } });
+        var sortObject = Session.get('sort');
+        var actualSort = {};
+
+        for (var key in sortObject) {
+            if (sortObject.hasOwnProperty(key)) {
+                var setting = sortObject[key]; // Since dynamic, use []
+                if (setting != 0) {
+                    actualSort[key] = setting;
+                }
+            }
+        
         }
-        return Posts.find({}, { sort: { createdAt: -1 } });
+
+        console.log(sortObject);
+        console.log(actualSort);
+
+        return Posts.find({}, { sort: actualSort });
     }
 });
 
@@ -70,7 +80,7 @@ Template.Viewer.events({
             cancelButtonText: 'Nein',
             dangerMode: true
         }).then(function (returned) {
-            if(returned.value) {
+            if (returned.value) {
                 Images.remove({ _id: pictureId }, function (error) {
                     if (error) {
                         swal('Fehler', 'Fehler beim löschen: ' + error.reason, 'error');
@@ -91,28 +101,28 @@ Template.Viewer.events({
     'click .changelock': (e) => {
         var postId = Template.currentData().post._id;
         var postPrivate = Template.currentData().post.private;
-        Posts.update({ _id: postId }, { $set: { private: !postPrivate }}, () => {
+        Posts.update({ _id: postId }, { $set: { private: !postPrivate } }, () => {
             $('.tooltipped').tooltip({ delay: 50 });
         });
     },
     'click .likeBtn': (e) => {
         var postId = Template.currentData().post._id;
         var hasLiked = Template.Viewer.__helpers.get('hasLiked').call();
-        if(!hasLiked) {
-            Meteor.call('posts.like', {postId: postId, userId: Meteor.userId()}, (err, res) => {
-                if(err) {
-                    if(err.error && typeof err.error == 'string' && err.error.indexOf('posts.like') > -1) {
+        if (!hasLiked) {
+            Meteor.call('posts.like', { postId: postId, userId: Meteor.userId() }, (err, res) => {
+                if (err) {
+                    if (err.error && typeof err.error == 'string' && err.error.indexOf('posts.like') > -1) {
                         swal('Ups', err.reason, 'warning');
                     } else {
                         swal('Fehler', err.message, 'error');
                     }
                 }
-                
+
             });
         } else {
-            Meteor.call('posts.unlike', {postId: postId, userId: Meteor.userId()}, (err, res) => {
-                if(err) {
-                    if(err.error && typeof err.error == 'string' && err.error.indexOf('posts.unlike') > -1) {
+            Meteor.call('posts.unlike', { postId: postId, userId: Meteor.userId() }, (err, res) => {
+                if (err) {
+                    if (err.error && typeof err.error == 'string' && err.error.indexOf('posts.unlike') > -1) {
                         swal('Ups', err.reason, 'warning');
                     } else {
                         swal('Fehler', err.message, 'error');
@@ -120,6 +130,6 @@ Template.Viewer.events({
                 }
             });
         }
-        
+
     }
 });
