@@ -100,6 +100,12 @@ var arbeiten = [
         schule: false,
         datum: '16.01.18',
         dauer: 1
+    },
+    {
+        name: "Thumbnails ins Karten Design ändern",
+        schule: false,
+        datum: '16.01.18',
+        dauer: 1
     }
 ];
 

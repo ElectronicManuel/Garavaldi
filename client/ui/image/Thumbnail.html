@@ -2,11 +2,11 @@
     <div class="col s12 m4 l3">
         <div class="card thumbnail {{#if isOwner }}self{{/if}}">
             <div class="card-image">
-                <img src="{{ file.link }}" alt="{{ file.name }}">
-                <span class="card-title truncate">{{ post.title }}</span>
+                <a href="{{ link }}"><img src="{{ file.link }}" alt="{{ file.name }}"></a>
+                <a href="{{ link }}" class="card-title truncate tooltipped" data-tooltip="{{ post.title }}">{{ post.title }}</a>
             </div>
             <div class="card-content">
-                <p class="truncate">{{ post.description }}</p>
+                <p class="truncate tooltipped" data-tooltip="{{ post.description }}"><a href="{{ link }}" class="black-text">{{ post.description }}</a></p>
                 <p class="grey-text">von {{ post.ownerName }}</p>
                 <p class="grey-text">{{ since }}</p>
             </div>

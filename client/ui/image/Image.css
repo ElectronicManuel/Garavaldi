@@ -1,8 +1,8 @@
 .thumbnail .card-title {
     background: rgba(0, 0, 0, 0.75) !important;
-    padding: 1vh !important;
-    margin-left: 1vh !important;
-    margin-bottom: 1vh !important;
+    padding: 0.5vh !important;
+    margin-left: 0.5vh !important;
+    margin-bottom: 0.5vh !important;
     border-radius: 2px !important;
     max-width: 90% !important;
 }
