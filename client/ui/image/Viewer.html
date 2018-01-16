@@ -11,7 +11,7 @@
                     <button class="btn-large red tooltipped delete" data-tooltip="Bild löschen">
                         <i class="large material-icons white-text">delete_forever</i>
                     </button>
-                    <button class="btn-large blue tooltipped changelock" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
+                    <button class="btn-large tooltipped changelock {{#if post.private}}indigo darken-4{{else}}blue{{/if}}" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
                         <i class="large material-icons white-text">{{#if post.private}}lock_open{{else}}lock_outline{{/if}}</i>
                     </button>
                 </div>

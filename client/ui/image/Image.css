@@ -3,6 +3,14 @@
     margin-bottom: 2% !important;
 }
 
+.thumbnail li {
+    margin: 0 !important;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
 .thumbnailContainer {
     width: 100% !important;
 }

@@ -5,18 +5,31 @@
                 <img src="{{ file.link }}" alt="{{ file.name }}" />
             </a>
         </div>
-        <a href="{{ link }}">
-            <h5 class="truncate">
-                {{ post.title }}
-            </h5>
-        </a>
-        <span class="truncate">{{ post.description }}</span>
-        <ul class="no-margin grey-text">
-            <li>von {{ post.ownerName }}
-                {{#if post.private }}
-                    <i class="material-icons right black-text">lock</i>
-                {{/if}}</li>
-            <li>{{ since }}</li>
-        </ul>
+        <div class="">
+            <a href="{{ link }}">
+                <h5 class="truncate">
+                    {{ post.title }}
+                </h5>
+            </a>
+            <span class="truncate">{{ post.description }}</span>
+            <ul class="no-margin grey-text">
+                <li class="row">
+                    <span class="col s10 truncate nopadding">von {{ post.ownerName }}</span>
+                    <span class="col s2">
+                        <span class="truncate">{{ likes }} l.</span>
+                    </span>
+                </li>
+                <li class="row">
+                    <span class="col s10 nopadding">
+                        {{ since }}
+                    </span>
+                    <span class="col s2">
+                        {{#if post.private }}
+                            <i class="material-icons right black-text">lock</i>
+                        {{/if}}
+                    </span>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>

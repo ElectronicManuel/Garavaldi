@@ -12,6 +12,13 @@ imageHelpers = {
     },
     isOwner: () => {
         return Meteor.user()._id == Template.currentData().post.owner;
+    },
+    likes: () => {
+        var post = Template.currentData().post;
+        if(post && post.likes) {
+            return post.likes.length;
+        }
+        return 0;
     }
 };
 
