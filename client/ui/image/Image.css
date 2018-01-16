@@ -26,7 +26,7 @@
 .metasection {
     padding-bottom: 2%;
     background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 255)) !important;
-    word-wrap: break-word !important;
+    margin-bottom: 0 !important;
 }
 
 .description {
