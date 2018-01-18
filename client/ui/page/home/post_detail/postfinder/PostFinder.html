@@ -1,0 +1,7 @@
+<template name="PostFinder">
+    {{#if post != undefined }}
+        {{> PostDetail post=post }}
+    {{else}}
+        {{> PostNotFound }}
+    {{/if}}
+</template>

@@ -18,13 +18,3 @@ Template.Routes.helpers({
         return navs;
     }
 });
-
-Template.NavigationBar.helpers({
-    isHome: () => {
-        return FlowRouter.getRouteName() == 'home';
-    }
-});
-
-Template.NavigationBar.onRendered(() => {
-    $(".button-collapse").sideNav();
-});

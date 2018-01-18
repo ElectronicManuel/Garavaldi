@@ -1,77 +1,14 @@
-imageHelpers = {
-    since: () => {
-        moment.locale('de');
-        return moment(Template.currentData().post.createdAt).fromNow();
-    },
-    link: () => {
-        return '/view?i=' + Template.currentData().post._id;
-    },
-    file: () => {
-        toReturn = Images.findOne({ _id: Template.currentData().post.picture });
-        return toReturn;
-    },
-    isOwner: () => {
-        return Meteor.userId() == Template.currentData().post.owner;
-    },
-    likes: () => {
-        var post = Template.currentData().post;
-        if (post && post.likes) {
-            return post.likes.length;
-        }
-        return 0;
-    },
-    hasLiked: () => {
-        var post = Template.currentData().post;
-        if (post && post.likes) {
-            return post.likes.indexOf(Meteor.userId()) > -1;
-        }
-        return false;
-    }
-};
-
-Template.Thumbnail.helpers(imageHelpers);
-Template.Viewer.helpers(imageHelpers);
-
-Template.Viewer.onRendered(() => {
+Template.PostDetail.onRendered(() => {
     $('.materialboxed').materialbox();
     $('.tooltipped').tooltip({ delay: 50 });
     $('main').addClass('viewer');
 });
 
-Template.Viewer.onDestroyed(() => {
+Template.PostDetail.onDestroyed(() => {
     $('main').removeClass('viewer');
 });
 
-Template.ImageContainer.helpers({
-    posts: () => {
-        var sortObject = Session.get('sort');
-        var actualSort = {};
-
-        for (var key in sortObject) {
-            if (sortObject.hasOwnProperty(key)) {
-                var setting = sortObject[key]; // Since dynamic, use []
-                if (setting != 0) {
-                    actualSort[key] = setting;
-                }
-            }
-        
-        }
-
-        var searchObject = {};
-
-        var searchQuery = Session.get('search_query');
-        if(searchQuery) {
-            var searchRegex = { $regex: '.*' + searchQuery + '.*', $options: 'i' };
-            searchObject = { $or: [ { title: searchRegex }, { description: searchRegex }, { ownerName: searchRegex } ] };
-        }
-
-        var toReturn = Posts.find(searchObject, { sort: actualSort });
-        $('.tooltipped').tooltip({ delay: 50 });
-        return toReturn;
-    }
-});
-
-Template.Viewer.events({
+Template.PostDetail.events({
     'click .delete': (e) => {
         e.preventDefault();
 

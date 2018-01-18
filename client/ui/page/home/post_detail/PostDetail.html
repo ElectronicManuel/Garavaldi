@@ -1,12 +1,12 @@
-<template name="Viewer">
+<template name="PostDetail">
     <div class="imageViewer row">
         <div class="col s12 valign-wrapper">
-            <img class="responsive-img materialboxed" src="{{ file.link }}" alt="{{ file.name }}" />
+            <img class="responsive-img materialboxed" src="{{ postFile.link }}" alt="{{ postFile.name }}" />
         </div>
     </div>
     <div class="metasection row">
         <div class="container">
-            {{#if isOwner }}
+            {{#if postIsOwner }}
                 <div class="postManagement">
                     <button class="btn-large red tooltipped delete" data-tooltip="Bild löschen">
                         <i class="large material-icons white-text">delete_forever</i>
@@ -22,12 +22,12 @@
             </h1>
             <div class="col s8">
                 <span class="black-text truncate">von {{ post.ownerName }}</span>
-                <span class="black-text truncate">{{ since }}</span>
+                <span class="black-text truncate">{{ postSince }}</span>
             </div>
             <div class="col s4">
                 <button class="iconButton right btn-large tooltipped likeBtn" data-tooltip="Mag ich">
-                    <i class="left material-icons {{#if hasLiked }}red{{else}}black{{/if}}-text">{{#if hasLiked }}favorite{{else}}favorite_border{{/if}}</i>
-                    <span class="black-text">{{ likes }}</span>
+                    <i class="left material-icons {{#if postHasLiked }}red{{else}}black{{/if}}-text">{{#if postHasLiked }}favorite{{else}}favorite_border{{/if}}</i>
+                    <span class="black-text">{{ postLikes }}</span>
                 </button>
             </div>
             <div class="description col s12">

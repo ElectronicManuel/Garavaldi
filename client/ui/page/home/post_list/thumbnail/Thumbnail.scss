@@ -1,0 +1,21 @@
+.thumbnail .card-title {
+    background: rgba(0, 0, 0, 0.75) !important;
+    padding: 0.5vh !important;
+    margin-left: 0.5vh !important;
+    margin-bottom: 0.5vh !important;
+    border-radius: 2px !important;
+    max-width: 90% !important;
+}
+
+.thumbnail .card-action a {
+    text-transform: none !important;
+}
+
+.thumbnail img {
+    width: 100% !important;
+    height: 25vh !important;
+}
+
+.thumbnail.self .card-action {
+    background-color: #a7ffeb;
+}

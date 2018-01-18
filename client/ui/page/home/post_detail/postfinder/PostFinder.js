@@ -1,4 +1,4 @@
-Template.ViewHandler.helpers({
+Template.PostFinder.helpers({
     post: () => {
         findPost();
         return this.post;
