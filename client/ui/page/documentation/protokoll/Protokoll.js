@@ -112,6 +112,12 @@ var arbeiten = [
         schule: true,
         datum: '18.01.18',
         dauer: 2
+    },
+    {
+        name: "Ordnerstruktur verbessern",
+        schule: true,
+        datum: '18.01.18',
+        dauer: 1
     }
 ];
 

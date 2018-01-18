@@ -51,7 +51,13 @@ Template.PostDetail.events({
     },
     'click .likeBtn': (e) => {
         var postId = Template.currentData().post._id;
-        var hasLiked = Template.Viewer.__helpers.get('hasLiked').call();
+        
+        var hasLiked = false;
+        var post = Template.currentData().post;
+        if (post && post.likes) {
+            hasLiked = post.likes.indexOf(Meteor.userId()) > -1;
+        }
+
         if (!hasLiked) {
             Meteor.call('posts.like', { postId: postId, userId: Meteor.userId() }, (err, res) => {
                 if (err) {
