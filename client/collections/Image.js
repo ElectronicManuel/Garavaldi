@@ -1,6 +1,9 @@
 /*
  * Dies ist eine Clientseitige Simulation der Collection um Änderungen schnell zu verarbeiten
  */
+import SimpleSchema from 'simpl-schema';
+SimpleSchema.extendOptions(['autoform']);
+
 Images = new FilesCollection({
     collectionName: 'Images',
     allowClientCode: true, // Required to let you remove uploaded file

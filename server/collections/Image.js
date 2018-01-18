@@ -2,6 +2,8 @@
  * Dies ist eine rein Server-seitige Collection, da diese auf API-Keys zugreifen muss und diese dem Client nicht zur verfügung stehen
  * Code ist von https://github.com/VeliovGroup/Meteor-Files/wiki/AWS-S3-Integration kopiert und angepasst
  */
+import SimpleSchema from 'simpl-schema';
+SimpleSchema.extendOptions(['autoform']);
 
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';

@@ -30,7 +30,6 @@ useraccounts:flow-routing
 useraccounts:materialize
 meteortoys:allthings
 service-configuration
-aldeed:collection2
 aldeed:autoform
 momentjs:moment
 ostrio:files
@@ -39,3 +38,4 @@ materialize:materialize
 cleandersonlobo:sweetalert2
 matb33:collection-hooks
 session
+aldeed:collection2-core@2.0.0
