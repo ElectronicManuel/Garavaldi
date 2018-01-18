@@ -57,9 +57,6 @@ Template.ImageContainer.helpers({
         
         }
 
-        console.log(sortObject);
-        console.log(actualSort);
-
         var toReturn = Posts.find({}, { sort: actualSort });
         $('.tooltipped').tooltip({ delay: 50 });
         return toReturn;

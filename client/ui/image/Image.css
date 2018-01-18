@@ -12,7 +12,8 @@
 }
 
 .thumbnail img {
-    max-height: 100vh !important;
+    width: 100% !important;
+    height: 25vh !important;
 }
 
 .thumbnail.self .card-action {
@@ -20,6 +21,19 @@
 }
 
 /* Viewer page */
+
+.metasection h1 {
+    padding-left: 0 !important;
+}
+
+.metasection .likeBtn {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.description {
+    word-wrap: break-word !important;
+}
 
 .material-placeholder {
     margin-left: auto;

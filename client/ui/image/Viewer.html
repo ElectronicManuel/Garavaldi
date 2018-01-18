@@ -17,10 +17,14 @@
                 </div>
             {{/if}}
             <h1 class="col s12">
-                    {{ post.title }}
-                    {{#if post.private }}<i class="medium material-icons right">lock_outline</i>{{/if}}
+                {{ post.title }}
+                {{#if post.private }}<i class="medium material-icons right">lock_outline</i>{{/if}}
             </h1>
-            <div class="col s12">
+            <div class="col s8">
+                <span class="black-text truncate">von {{ post.ownerName }}</span>
+                <span class="black-text truncate">{{ since }}</span>
+            </div>
+            <div class="col s4">
                 <button class="iconButton right btn-large tooltipped likeBtn" data-tooltip="Mag ich">
                     <i class="left material-icons {{#if hasLiked }}red{{else}}black{{/if}}-text">{{#if hasLiked }}favorite{{else}}favorite_border{{/if}}</i>
                     <span class="black-text">{{ likes }}</span>
