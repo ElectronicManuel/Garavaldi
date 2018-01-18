@@ -57,7 +57,15 @@ Template.ImageContainer.helpers({
         
         }
 
-        var toReturn = Posts.find({}, { sort: actualSort });
+        var searchObject = {};
+
+        var searchQuery = Session.get('search_query');
+        if(searchQuery) {
+            var searchRegex = { $regex: '.*' + searchQuery + '.*', $options: 'i' };
+            searchObject = { $or: [ { title: searchRegex }, { description: searchRegex }, { ownerName: searchRegex } ] };
+        }
+
+        var toReturn = Posts.find(searchObject, { sort: actualSort });
         $('.tooltipped').tooltip({ delay: 50 });
         return toReturn;
     }

@@ -106,6 +106,12 @@ var arbeiten = [
         schule: false,
         datum: '16.01.18',
         dauer: 1
+    },
+    {
+        name: "Suchfunktion einbauen",
+        schule: true,
+        datum: '18.01.18',
+        dauer: 2
     }
 ];
 
