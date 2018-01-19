@@ -1,5 +1,5 @@
 <template name="NavigationBar">
-    <div>
+    <div class="NavigationBar">
         <!-- Navigation -->
         <nav>
             <div class="nav-wrapper">
@@ -27,8 +27,8 @@
                     <div class="black-text">
                             {{> Routes}}
                             
-                            {{#if isHome }}
-                                <div class="settingsBarWrapperSide">
+                            {{#if routeEquals "home" }}
+                                <div>
                                     {{> SettingsBar }}
                                 </div>
                             {{/if}}
@@ -42,7 +42,7 @@
 
 <template name="Routes">
     {{#each nav in navigations}}
-    <li class="{{isActiveRoute nav.name}}">
+    <li class="Routes {{isActiveRoute nav.name}}">
         <a href="{{ nav.route }}">{{ nav.displayName }}
             {{#if nav.icon }}
                 <i class="material-icons left">{{ nav.icon }}</i> 

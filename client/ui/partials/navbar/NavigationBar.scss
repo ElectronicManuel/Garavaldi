@@ -1,8 +1,16 @@
-.userDiv {
-    margin-bottom: 1em;
-    padding: 1em;
-}
+.NavigationBar {
 
-.userDiv #at-nav-button {
-    margin: 0;
+    li.active {
+        background-color: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .userDiv {
+        margin-bottom: 1em;
+        padding: 1em;
+
+        #at-nav-button {
+            margin: 0;
+        }
+    }
+
 }

@@ -6,11 +6,13 @@
 </head>
 
 <template name="MainLayout">
-    <div class="page-flexbox-wrapper">
+    <div class="MainLayout page-flexbox-wrapper">
         <header>
             {{> NavigationBar }}
         </header>
-        <main>
+        <main class="{{#if routeEquals "view" }}postdetail{{/if}}">
+            {{#if loginLoading }}{{> spinner }}{{/if}}
+
             {{> Template.dynamic template=main}}
         </main>
         <footer class="page-footer">

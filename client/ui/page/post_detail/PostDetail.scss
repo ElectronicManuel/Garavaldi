@@ -1,55 +1,55 @@
-.metasection h1 {
-    padding-left: 0 !important;
+@import "../../importMaterial";
+
+.PostDetail {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+
+    .imageViewer {
+        flex: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        .material-placeholder {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+        }
+    }
+
+    .metasection {
+        flex: 1 0 auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 2%;
+        background: linear-gradient(to bottom right, darken(#fff, 5%), darken(#fff, 15%)) !important;
+        
+        h1 {
+            padding-left: 0 !important;
+        }
+
+        .postManagement {
+            background-color: white !important;
+            border: 1px solid rgb(240, 240, 240) !important;
+        }
+
+        .likeBtn {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        .description {
+            word-wrap: break-word !important;
+            background-color: white !important;
+            border: 1px solid rgb(212, 212, 212) !important;
+            border-radius: 2px !important;
+        }
+    }
+
 }
 
-.metasection .likeBtn {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-}
-
-.description {
-    word-wrap: break-word !important;
-}
-
-.material-placeholder {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-}
-
-.metasection {
-    padding-bottom: 2%;
-    background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 255)) !important;
-    margin-bottom: 0 !important;
-}
-
-.description {
-    background-color: white !important;
-    border: 1px solid rgb(212, 212, 212) !important;
-}
-
-.postManagement {
-    background-color: white !important;
-    border: 1px solid rgb(240, 240, 240) !important;
-}
-
-.no-margin {
-    margin: 0 !important;
-}
-
-main.viewer {
+main.postdetail {
     display: flex !important;
     flex-direction: column !important;
-}
-
-.imageViewer {
-    flex: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-.metasection {
-    flex: 1 0 auto !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
 }

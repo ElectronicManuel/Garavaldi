@@ -1,3 +1,13 @@
+Template.MainLayout.helpers({
+    loginLoading: () => {
+        return AccountsTemplates.disabled();
+    }
+});
+
+Template.registerHelper('routeEquals', (routeName) => {
+    return FlowRouter.getRouteName() == routeName;
+});
+
 Template.registerHelper('postSince', () => {
     moment.locale('de');
     return moment(Template.currentData().post.createdAt).fromNow();

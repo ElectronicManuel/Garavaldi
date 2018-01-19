@@ -1,5 +1,5 @@
 <template name="SingleSetting">
-    <p class="sortSetting">
+    <p class="SingleSetting sortSetting">
         <span class="sortSetting inline-icon">{{ display }}</span>
         <i class="material-icons inline-icon sortSetting left">
             {{#if statusEquals name 0 }}check_box_outline_blank{{/if}}
@@ -10,7 +10,7 @@
 </template>
 
 <template name="SettingsBar">
-    <div class="settingsBar">
+    <div class="SettingsBar">
         <h3>Sortieren</h3>
         {{#each settingsList}}
             {{> SingleSetting }}

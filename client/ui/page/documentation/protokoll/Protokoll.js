@@ -121,7 +121,7 @@ var arbeiten = [
     }
 ];
 
-Template.ProtokollLayout.helpers({
+Template.Protokoll.helpers({
     arbeiten: () => {
         return arbeiten;
     },

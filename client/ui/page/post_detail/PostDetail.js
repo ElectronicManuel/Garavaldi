@@ -1,11 +1,6 @@
 Template.PostDetail.onRendered(() => {
     $('.materialboxed').materialbox();
     $('.tooltipped').tooltip({ delay: 50 });
-    $('main').addClass('viewer');
-});
-
-Template.PostDetail.onDestroyed(() => {
-    $('main').removeClass('viewer');
 });
 
 Template.PostDetail.events({

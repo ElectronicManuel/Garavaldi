@@ -1,44 +1,31 @@
+@import "../importMaterial";
+
 html {
     width: 100%;
     height: 100%;
-    word-wrap: normal !important;
 }
+
+// Sticky footer
 .page-flexbox-wrapper {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
-
 main {
     flex: 1 0 auto;
 }
 
-.total {
-    font-weight: bold !important;
-    text-decoration: underline !important;
-}
-
-li.active {
-    background-color: rgba(0, 0, 0, 0.2) !important;
-}
-
-select {
-    display: inline-block;
-}
-
+// Globale CSS Klassen
 .error {
-    color: red;
+    color: $error-color !important;
 }
-
 .btn {
     text-transform: none !important;
 }
-
 .iconButton {
     background: none !important;
     box-shadow: none !important;
 }
-
 .inline-icon {
     vertical-align: middle !important;
 }

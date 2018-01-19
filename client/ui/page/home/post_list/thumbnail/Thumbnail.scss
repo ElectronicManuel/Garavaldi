@@ -1,21 +1,31 @@
-.thumbnail .card-title {
-    background: rgba(0, 0, 0, 0.75) !important;
-    padding: 0.5vh !important;
-    margin-left: 0.5vh !important;
-    margin-bottom: 0.5vh !important;
-    border-radius: 2px !important;
-    max-width: 90% !important;
-}
+@import "../../../../importMaterial";
 
-.thumbnail .card-action a {
-    text-transform: none !important;
-}
+.Thumbnail {
 
-.thumbnail img {
-    width: 100% !important;
-    height: 25vh !important;
-}
+    .card-title {
+        background: rgba(0, 0, 0, 0.75) !important;
+        padding: 0.5vh !important;
+        margin-left: 0.5vh !important;
+        margin-bottom: 0.5vh !important;
+        border-radius: 2px !important;
+        max-width: 90% !important;
+    }
 
-.thumbnail.self .card-action {
-    background-color: #a7ffeb;
+    .card-action a {
+        text-transform: none !important;
+    }
+
+    img {
+        width: 100% !important;
+        height: 25vh !important;
+    }
+
+    .self .card-action {
+        background-color: $primary-color-light;
+    }
+
+    .lock {
+        color: $secondary-color;
+    }
+
 }
