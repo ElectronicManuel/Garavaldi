@@ -1,0 +1,3 @@
+Template.CustomTextInput.helpers(AccountsTemplates.atInputHelpers);
+Template.CustomTextInput.events(AccountsTemplates.atInputEvents);
+Template.CustomTextInput.helpers(AccountsTemplates.atInputHelpers);
