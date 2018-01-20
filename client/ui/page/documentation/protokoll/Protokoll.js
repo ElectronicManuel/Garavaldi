@@ -118,6 +118,12 @@ var arbeiten = [
         schule: true,
         datum: '18.01.18',
         dauer: 1
+    },
+    {
+        name: "MaterializeCSS personalisieren",
+        schule: false,
+        datum: '20.01.18',
+        dauer: 3
     }
 ];
 

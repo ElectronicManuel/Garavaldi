@@ -1,3 +1,5 @@
+@import "{}/client/lib/materialize";
+
 .NavigationBar {
 
     li.active {
@@ -7,6 +9,7 @@
     .userDiv {
         margin-bottom: 1em;
         padding: 1em;
+        background-color: $primary-color;
 
         #at-nav-button {
             margin: 0;

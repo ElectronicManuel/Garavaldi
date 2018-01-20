@@ -22,7 +22,6 @@ accounts-google
 zimme:active-route
 kadira:flow-router
 kadira:blaze-layout
-jquery
 arillo:flow-router-helpers
 google-config-ui
 useraccounts:core
@@ -35,7 +34,6 @@ aldeed:autoform
 momentjs:moment
 ostrio:files
 ostrio:autoform-files
-materialize:materialize
 cleandersonlobo:sweetalert2
 matb33:collection-hooks
 session
