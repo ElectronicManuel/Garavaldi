@@ -30,8 +30,7 @@
         }
 
         .postManagement {
-            background-color: white !important;
-            border: 1px solid rgb(240, 240, 240) !important;
+            background-color: lighten($primary-color-light, 15%) !important;
         }
 
         .likeBtn {
@@ -41,7 +40,7 @@
 
         .description {
             word-wrap: break-word !important;
-            background-color: white !important;
+            background-color: darken(#fff, 5%) !important;
             border: 1px solid rgb(212, 212, 212) !important;
             border-radius: 2px !important;
             margin-top: 2% !important;
@@ -56,11 +55,11 @@ main.postdetail {
 }
 
 .private_true {
-    background-color: darken($primary-color-dark, 20%);
+    background-color: darken($primary-color-dark, 20%) !important;
 }
 .private_true-text {
-    color: darken($primary-color-dark, 20%);
+    color: darken($primary-color-dark, 20%) !important;
 }
 .private_false {
-    background-color: $primary-color-dark;
+    background-color: $primary-color !important;
 }

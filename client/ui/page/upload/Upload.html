@@ -2,7 +2,17 @@
     <div class="Upload container">
         <h1>Hochladen</h1>
         <div class="upload-posts-container">
-            {{> quickForm collection="Posts" id="insertPostsForm" type="insert" class="new-posts-form"}}
+            {{#autoForm collection="Posts" id="insertPostsForm" type="insert" }}
+
+            {{> afQuickField name='title' autofocus='' }}
+            {{> afQuickField name='description'}}
+            {{> afQuickField name='picture'}}
+            {{> afQuickField name='private'}}
+
+            <button type="submit" class="btn submit">Hochladen</button>
+            <button type="reset" class="btn reset">Zurücksetzen</button>
+
+            {{/autoForm}}
         </div>
     </div>
 </template>

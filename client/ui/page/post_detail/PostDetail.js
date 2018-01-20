@@ -1,6 +1,22 @@
 Template.PostDetail.onRendered(() => {
     $('.materialboxed').materialbox();
     $('.tooltipped').tooltip({ delay: 50 });
+    $('#edit_dialog').modal({
+        complete: () => {
+            AutoForm.resetForm('updatePostForm');
+        }
+    });
+});
+
+AutoForm.hooks({
+    updatePostForm: {
+        onSuccess: (formType, result) => {
+            $('#edit_dialog').modal('close');
+            swal('Post bearbeitet', 'Post erfolgreich bearbeitet', 'success');
+        },
+        onError: (formType, result) => {
+        }
+    }
 });
 
 Template.PostDetail.events({

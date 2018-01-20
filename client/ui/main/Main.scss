@@ -37,3 +37,19 @@ main {
 .small {
     font-size: 70%;
 }
+// Formular Styles
+.btn.submit {
+    background-color: $primary-color-dark;
+}
+.btn.reset {
+    background-color: $error-color;
+}
+.switch {
+    display: inline-block;
+}
+.material-icons.prefix {
+    width: 3rem;
+}
+.FileInput + label {
+    display: none;
+}

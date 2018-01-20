@@ -18,3 +18,5 @@ Meteor.Spinner.options = {
     hwaccel: false, // Whether to use hardware acceleration
     zIndex: 2e9, // The z-index (defaults to 2000000000)
 };
+
+AutoForm.setDefaultTemplate('materialize');

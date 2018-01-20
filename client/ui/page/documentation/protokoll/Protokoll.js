@@ -48,19 +48,19 @@ var arbeiten = [
         dauer: 2
     },
     {
-        name: "Bild hochladen und anzeigen Implementierung Teil 1",
+        name: "Bild hochladen/anzeigen Implementierung Teil 1",
         schule: false,
         datum: '17.12.17',
         dauer: 5
     },
     {
-        name: "Bild hochladen und anzeigen Implementierung Teil 2",
+        name: "Bild hochladen/anzeigen Implementierung Teil 2",
         schule: false,
         datum: '09.01.18',
         dauer: 1.5
     },
     {
-        name: "Bild hochladen und anzeigen Implementierung Teil 3",
+        name: "Bild hochladen/anzeigen Implementierung Teil 3",
         schule: false,
         datum: '10.01.18',
         dauer: 1
@@ -96,13 +96,13 @@ var arbeiten = [
         dauer: 1
     },
     {
-        name: "'Mag ich' / Private Posts klar visualisiert",
+        name: "'Mag ich' / Private Posts design",
         schule: false,
         datum: '16.01.18',
         dauer: 1
     },
     {
-        name: "Thumbnails ins Karten Design ändern",
+        name: "Thumbnails im Karten-Stil",
         schule: false,
         datum: '16.01.18',
         dauer: 1
@@ -124,6 +124,18 @@ var arbeiten = [
         schule: false,
         datum: '20.01.18',
         dauer: 3
+    },
+    {
+        name: "Posts bearbeiten",
+        schule: false,
+        datum: '20.01.18',
+        dauer: 1
+    },
+    {
+        name: "Formulare aufbessern",
+        schule: false,
+        datum: '20.01.18',
+        dauer: 1
     }
 ];
 
