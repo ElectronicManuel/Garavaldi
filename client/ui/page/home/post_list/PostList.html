@@ -2,11 +2,13 @@
     <div class="PostList">
         <div class="thumbnailContainer row">
             {{#if imagesLoaded }}
-                {{#each post in posts}}
-                    {{> Thumbnail post=post}}
-                {{else}}
-                    <p>Keine Bilder gefunden</p>
-                {{/each}}
+                {{#momentum plugin='slide-height'}}
+                    {{#each post in posts}}
+                        {{> Thumbnail post=post}}
+                    {{else}}
+                        <p>Keine Bilder gefunden</p>
+                    {{/each}}
+                {{/momentum}}
             {{else}}
                 <p>Suche Bilder...</p>
             {{/if}}
