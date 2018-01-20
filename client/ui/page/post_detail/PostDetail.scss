@@ -1,3 +1,5 @@
+@import "{}/client/lib/materialize";
+
 .PostDetail {
     display: flex;
     flex-direction: column;
@@ -42,6 +44,7 @@
             background-color: white !important;
             border: 1px solid rgb(212, 212, 212) !important;
             border-radius: 2px !important;
+            margin-top: 2% !important;
         }
     }
 
@@ -50,4 +53,14 @@
 main.postdetail {
     display: flex !important;
     flex-direction: column !important;
+}
+
+.private_true {
+    background-color: darken($primary-color-dark, 20%);
+}
+.private_true-text {
+    color: darken($primary-color-dark, 20%);
+}
+.private_false {
+    background-color: $primary-color-dark;
 }

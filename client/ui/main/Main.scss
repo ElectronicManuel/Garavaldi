@@ -15,6 +15,11 @@ main {
     flex: 1 0 auto;
 }
 
+// Responsive Text
+.material-icons {
+    line-height: inherit !important;
+}
+
 // Globale CSS Klassen
 .error {
     color: $error-color !important;
@@ -28,4 +33,7 @@ main {
 }
 .inline-icon {
     vertical-align: middle !important;
+}
+.small {
+    font-size: 70%;
 }

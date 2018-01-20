@@ -12,18 +12,18 @@
                         <button class="btn-large red tooltipped delete" data-tooltip="Bild löschen">
                             <i class="large material-icons white-text">delete_forever</i>
                         </button>
-                        <button class="btn-large tooltipped changelock {{#if post.private}}indigo darken-4{{else}}blue{{/if}}" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
+                        <button class="btn-large tooltipped changelock {{#if post.private}}private_false{{else}}private_true{{/if}}" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
                             <i class="large material-icons white-text">{{#if post.private}}lock_open{{else}}lock_outline{{/if}}</i>
                         </button>
                     </div>
                 {{/if}}
                 <h1 class="col s12">
                     {{ post.title }}
-                    {{#if post.private }}<i class="medium material-icons right">lock_outline</i>{{/if}}
+                    {{#if post.private }}<i class="medium material-icons right private_true-text">lock_outline</i>{{/if}}
                 </h1>
                 <div class="col s8">
-                    <span class="black-text truncate">von {{ post.ownerName }}</span>
-                    <span class="black-text truncate">{{ postSince }}</span>
+                    <span class="grey-text small truncate">von {{ post.ownerName }}</span>
+                    <span class="grey-text small truncate">{{ postSince }}</span>
                 </div>
                 <div class="col s4">
                     <button class="iconButton right btn-large tooltipped likeBtn" data-tooltip="Mag ich">

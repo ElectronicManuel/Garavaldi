@@ -7,16 +7,16 @@
             </div>
             <div class="card-content">
                 <p class="truncate tooltipped" data-tooltip="{{ post.description }}"><a href="{{ postLink }}" class="black-text">{{ post.description }}</a></p>
-                <p class="grey-text truncate">von {{ post.ownerName }}</p>
-                <p class="grey-text truncate">{{ postSince }}</p>
+                <p class="grey-text small truncate">von {{ post.ownerName }}</p>
+                <p class="grey-text small truncate">{{ postSince }}</p>
             </div>
             <div class="card-action">
                 <a>
                     <span class="black-text">{{ postLikes }}</span>
-                    <i class="tiny inline-icon material-icons {{#if postHasLiked }}red{{else}}black{{/if}}-text">favorite</i>
+                    <i class="flow-text inline-icon material-icons {{#if postHasLiked }}red{{else}}black{{/if}}-text">favorite</i>
                 </a>
                 {{#if post.private }}
-                <a><i class="material-icons right lock">lock</i></a>
+                <a class="locklink"><i class="material-icons right lock private_true-text">lock</i></a>
                 {{/if}}
             </div>
         </div>
