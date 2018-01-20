@@ -1,19 +1,24 @@
 <template name="SingleSetting">
-    <p class="SingleSetting sortSetting">
-        <span class="sortSetting inline-icon">{{ display }}</span>
-        <i class="material-icons inline-icon sortSetting left">
-            {{#if statusEquals name 0 }}check_box_outline_blank{{/if}}
-            {{#if statusEquals name -1 }}arrow_downward{{/if}}
-            {{#if statusEquals name 1 }}arrow_upward{{/if}}
-        </i>
-    </p>
+    <li class="SingleSetting sortSetting">
+        <a class="sortSetting">
+            <i class="fa-li fa sortSetting left
+            {{#if statusEquals name 0 }}fa-sort{{/if}}
+            {{#if statusEquals name -1 }}fa-sort-desc{{/if}}
+            {{#if statusEquals name 1 }}fa-sort-asc{{/if}}
+            ">
+            </i>{{ display }}
+        </a>
+    </li>
 </template>
 
 <template name="SettingsBar">
     <div class="SettingsBar">
-        <h4>Sortieren</h4>
-        {{#each settingsList}}
-            {{> SingleSetting }}
-        {{/each}}
+        {{#if isCaller 'home'}}
+        {{/if}}
+        <ul class="fa-ul {{caller}}">
+            {{#each settingsList}}
+                {{> SingleSetting}}
+            {{/each}}
+        </ul>
     </div>
 </template>

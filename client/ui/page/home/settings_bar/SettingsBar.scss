@@ -1,7 +1,6 @@
 // Einstellungsleiste in Seiten-Navigation
 .side-nav {
     .SettingsBar {
-        padding: 0 32px;
         border-top: 1px solid black;
     }
 }
@@ -12,9 +11,15 @@
         cursor: pointer !important;
     }
 
-    p.sortSetting {
-        margin-bottom: 1vh !important;
-        margin-top: 1vh !important;
+    .home {
+        a {
+            color: black;
+            line-height: inherit !important;
+        }
+
+        .fa {
+            line-height: inherit !important;
+        }
     }
 
 }

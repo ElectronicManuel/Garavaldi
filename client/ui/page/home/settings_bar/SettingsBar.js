@@ -1,4 +1,18 @@
 var settingsBarHelpers = {
+    isCaller: (callerName) => {
+        var caller = Template.currentData().caller
+        if(caller == undefined) {
+            caller = Template.parentData().caller;
+        }
+        return  caller == callerName;
+    },
+    caller: () => {
+        var caller = Template.currentData().caller
+        if(caller == undefined) {
+            caller = Template.parentData().caller;
+        }
+        return caller;
+    },
     statusEquals: (name, type) => {
         return Session.get('sort')[name] == type;
     },
