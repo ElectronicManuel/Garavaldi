@@ -1,7 +1,14 @@
 <template name="PostFinder">
-    {{#if post != undefined }}
-        {{> PostDetail post=post }}
+    {{#if imagesLoaded }}
+        {{#if post != undefined }}
+            {{> PostDetail post=post }}
+        {{else}}
+            {{> PostNotFound }}
+        {{/if}}
     {{else}}
-        {{> PostNotFound }}
+        <div class="container">
+            <p>Suche Post...</p>
+        </div>
     {{/if}}
+    
 </template>

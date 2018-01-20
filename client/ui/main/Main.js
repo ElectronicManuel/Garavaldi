@@ -4,6 +4,10 @@ Template.MainLayout.helpers({
     }
 });
 
+Template.registerHelper('imagesLoaded', () => {
+    return Session.get('imagesLoaded');
+});
+
 Template.registerHelper('routeEquals', (routeName) => {
     return FlowRouter.getRouteName() == routeName;
 });

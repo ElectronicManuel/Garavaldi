@@ -1,2 +1,4 @@
 Meteor.subscribe('posts');
-Meteor.subscribe('images');
+Meteor.subscribe('images', () => {
+    Session.set('imagesLoaded', true);
+});

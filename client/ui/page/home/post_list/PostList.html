@@ -1,11 +1,16 @@
 <template name="PostList">
     <div class="PostList">
         <div class="thumbnailContainer row">
-            {{#each post in posts}}
-                {{> Thumbnail post=post}}
+            {{#if imagesLoaded }}
+                {{#each post in posts}}
+                    {{> Thumbnail post=post}}
+                {{else}}
+                    <p>Keine Bilder gefunden</p>
+                {{/each}}
             {{else}}
-                <p>Keine Bilder gefunden</p>
-            {{/each}}
+                <p>Suche Bilder...</p>
+            {{/if}}
+            
         </div>
     </div>
 </template>
