@@ -1,36 +1,35 @@
 <template name="Protokoll">
     <div class="Protokoll container">
-        <table class="striped">
-            <thead>
-                <tr>
-                    <th>Ort</th>
-                    <th>Tätigkeit</th>
-                    <th>Datum</th>
-                    <th>Aufwand</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each arbeiten }}
-                <tr class="">
-                    {{#if schule }}
-                    <td><i class="material-icons left">library_books</i>Schule</td>
-                    {{else}}
-                    <td><i class="material-icons left">home</i>Zuhause</td>
-                    {{/if}}
-
-                    <td>{{ name }}</td>
-                    <td>{{ datum }}</td>
-                    <td>{{ dauer }} Stunden</td>
-                </tr>
-                {{/each}}
-
-                <tr class="total">
-                    <td>Total</td>
-                    <td></td>
-                    <td></td>
-                    <td>{{ totalZeit }}</td>
-                </tr>
-            </tbody>
-        </table>
+        <h4>Total {{totalZeit}} Stunden Arbeit</h4>
+        {{#each arbeiten }}
+            <div class="card">
+                <div class="card-content">
+                    <p class="tooltipped" data-tooltip="{{place.display}}" data-position="left">
+                        <i class="fa fa-{{place.icon}}"></i>
+                        {{ datum }}
+                    </p>
+                    <table class="striped small">
+                        <thead>
+                            <tr>
+                                <th>Tätigkeit</th>
+                                <th>Aufwand</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each actions}}
+                                <tr class="">
+                                    <td>{{ name }}</td>
+                                    <td>{{ duration }} Stunden</td>
+                                </tr>
+                            {{/each}}
+                            <tr class="subtotal">
+                                <td>Tagestotal</td>
+                                <td>{{total}} Stunden</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {{/each}}
     </div>
 </template>

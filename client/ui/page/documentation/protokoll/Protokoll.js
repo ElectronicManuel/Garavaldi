@@ -1,142 +1,81 @@
-var arbeiten = [
-    {
-        name: "Meteor installieren",
-        datum: '09.12.17',
-        schule: false,
-        dauer: 0.1
-    },
-    {
-        name: "Hosting Lösung für Meteor App finden",
-        schule: false,
-        datum: '09.12.17',
-        dauer: 0.3
-    },
-    {
-        name: "Meteor Tutorial Videoreihe anschauen",
-        schule: false,
-        datum: '09.12.17',
-        dauer: 2.5
-    },
-    {
-        name: "URL Routing mit FlowRouter einrichten",
-        schule: false,
-        datum: '10.12.17',
-        dauer: 0.5
-    },
-    {
-        name: "Materialize CSS einbinden",
-        schule: false,
-        datum: '12.12.17',
-        dauer: 1
-    },
-    {
-        name: "Account System implementieren",
-        schule: false,
-        datum: '12.12.17',
-        dauer: 3
-    },
-    {
-        name: "Google Login implementieren",
-        schule: false,
-        datum: '13.12.17',
-        dauer: 2
-    },
-    {
-        name: "Bilder Liste erstellen und Insert ohne Datei ermöglichen",
-        schule: true,
-        datum: '14.12.17',
-        dauer: 2
-    },
-    {
-        name: "Bild hochladen/anzeigen Implementierung Teil 1",
-        schule: false,
-        datum: '17.12.17',
-        dauer: 5
-    },
-    {
-        name: "Bild hochladen/anzeigen Implementierung Teil 2",
-        schule: false,
-        datum: '09.01.18',
-        dauer: 1.5
-    },
-    {
-        name: "Bild hochladen/anzeigen Implementierung Teil 3",
-        schule: false,
-        datum: '10.01.18',
-        dauer: 1
-    },
-    {
-        name: "CSS Bugfixes",
-        schule: true,
-        datum: '11.01.18',
-        dauer: 3
-    },
-    {
-        name: "Posts löschen implementieren",
-        schule: false,
-        datum: '15.01.18',
-        dauer: 1
-    },
-    {
-        name: "Bessere Dialoge hinzufügen",
-        schule: false,
-        datum: '15.01.18',
-        dauer: 1
-    },
-    {
-        name: "Private Posts implementieren",
-        schule: false,
-        datum: '15.01.18',
-        dauer: 1
-    },
-    {
-        name: "'Mag ich' funktion",
-        schule: false,
-        datum: '16.01.18',
-        dauer: 1
-    },
-    {
-        name: "'Mag ich' / Private Posts design",
-        schule: false,
-        datum: '16.01.18',
-        dauer: 1
-    },
-    {
-        name: "Thumbnails im Karten-Stil",
-        schule: false,
-        datum: '16.01.18',
-        dauer: 1
-    },
-    {
-        name: "Suchfunktion einbauen",
-        schule: true,
-        datum: '18.01.18',
-        dauer: 2
-    },
-    {
-        name: "Ordnerstruktur verbessern",
-        schule: true,
-        datum: '18.01.18',
-        dauer: 1
-    },
-    {
-        name: "MaterializeCSS personalisieren",
-        schule: false,
-        datum: '20.01.18',
-        dauer: 3
-    },
-    {
-        name: "Posts bearbeiten",
-        schule: false,
-        datum: '20.01.18',
-        dauer: 1
-    },
-    {
-        name: "Formulare aufbessern",
-        schule: false,
-        datum: '20.01.18',
-        dauer: 1
+Template.Protokoll.onRendered(() => {
+    $('.tooltipped').tooltip({ delay: 50 });
+});
+
+class Action {
+    constructor(name, duration) {
+        this.name = name;
+        this.duration = duration;
     }
+}
+
+class Workday {
+    constructor(datum, place, actions) {
+        this.datum = datum;
+        this.place = place;
+        this.actions = actions;
+
+        var total = 0;
+        var instance = this;
+        for(var i = 0; i < instance.actions.length; i++) {
+            var dauer = actions[i].duration;
+            total = total + dauer;
+        }
+
+        this.total = total;
+    }
+}
+
+var home = {
+    icon: 'home',
+    display: 'Zuhause'
+}
+
+var school = {
+    icon: 'graduation-cap',
+    display: 'In der Schule'
+}
+
+var arbeiten = [
+    new Workday('09.12.17', home, [
+        new Action('Meteor installieren', 0.1),
+        new Action('Hosting Lösung für Meteor App finden', 0.3),
+        new Action('Meteor Tutorial Videoreihe anschauen', 2.5)
+    ]),
+    new Workday('10.12.17', home, [new Action('URL Routing einrichten', 0.5)]),
+    new Workday('12.12.17', home, [
+        new Action('MaterializeCSS einbinden', 1),
+        new Action('Account System implementieren', 3)
+    ]),
+    new Workday('13.12.17', home, [new Action('Google Login implementieren', 2)]),
+    new Workday('14.12.17', school, [new Action('Postliste erstellen mit insert ohne Datei', 2)]),
+    new Workday('17.12.17', home, [new Action('Bild hochladen/anzeigen Implementierung Teil 1', 5)]),
+    new Workday('09.01.18', home, [new Action('Bild hochladen/anzeigen Implementierung Teil 2', 1.5)]),
+    new Workday('10.01.18', home, [new Action('Bild hochladen/anzeigen Implementierung Teil 3', 1)]),
+    new Workday('11.01.18', school, [new Action('CSS Bugfixes', 3)]),
+    new Workday('15.01.18', home, [
+        new Action('Posts löschen implementieren', 1),
+        new Action('Bessere Dialoge hinzufügen', 1),
+        new Action('Private Posts implementieren', 1)
+    ]),
+    new Workday('16.01.18', home, [
+        new Action("'Mag ich' funktion", 1),
+        new Action("'Mag ich' / Private Posts design", 1),
+        new Action("Thumbnails im Karten-Stil", 1)
+    ]),
+    new Workday('18.01.18', school, [
+        new Action("Suchfunktion einbauen", 2),
+        new Action("Ordnerstruktur verbessern", 1)
+    ]),
+    new Workday('20.01.18', home, [
+        new Action("MaterializeCSS personalisieren", 3),
+        new Action("Posts bearbeiten", 1),
+        new Action('Formulare aufbessern', 1)
+    ]),
+
+    new Workday('22.01.18', home, [
+        new Action('Eigenen Video-Player designen', 1)
+    ])
 ];
 
 Template.Protokoll.helpers({
@@ -146,8 +85,11 @@ Template.Protokoll.helpers({
     totalZeit: () => {
         var total = 0.0;
         for (var i = 0; i < arbeiten.length; i++) {
-            var dauer = arbeiten[i].dauer;
+            var dauer = arbeiten[i].total;
             total = total + dauer;
+            for (var j = 0; j < arbeiten[i].actions.length; j++) {
+                
+            }
         }
         return total;
     }

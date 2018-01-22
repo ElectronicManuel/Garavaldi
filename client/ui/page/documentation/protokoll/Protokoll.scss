@@ -1,11 +1,13 @@
+@import "{}/client/lib/materialize";
+
 .Protokoll {
-    .total {
-        font-weight: bold !important;
-        text-decoration: underline !important;
-        border-top: 3px solid black;
+
+    .card {
+        z-index: -1;
     }
 
-    h1 {
-        word-wrap: break-word;
+    .subtotal {
+        background-color: lighten($primary-color-light, 15%) !important;
+        font-weight: 400;
     }
 }
