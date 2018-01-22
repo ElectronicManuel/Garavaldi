@@ -1,14 +1,16 @@
 <template name="DocumentationHeader">
-    <nav class="pushpin-docu-nav" data-target="{{id}}">
-        <div class="nav-wrapper {{color}}">
-            <a href="" class="brand-logo center">{{name}}</a>
-            <ul class="left">
-                <li>
-                    <a href="/">Hauptseite</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="pushpin-container">
+        <nav class="pushpin-docu-nav" data-target="{{id}}">
+            <div class="nav-wrapper {{color}}">
+                <a href="" class="brand-logo center">{{name}}</a>
+                <ul class="left">
+                    <li>
+                        <a href="/">Hauptseite</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </template>
 
 <template name="Documentation">
@@ -27,7 +29,7 @@
             {{> DocumentationHeader id="reflexion" name="Reflexion" color="green accent-3"}}
             {{> Reflection}}
         </div>
-
+        
         <div id="docu" class="block">
             {{> DocumentationHeader id="docu" name="Arbeitsprotokollol" color="red darken-1"}}
             {{> Protokoll}}

@@ -11,6 +11,19 @@
                 <p class="grey-text text-darken-3 lighten-3">
                     Reflexion
                 </p>
+                <ul class="collapsible popout" data-collapsible="accordion">
+                    {{#each questions}}
+                        <li>
+                            <div class="collapsible-header popout {{#if zero @index}}active{{/if}}">
+                                <i class="material-icons">{{icon}}</i>{{question}}</div>
+                            <div class="collapsible-body">
+                                <span>
+                                    {{response}}
+                                </span>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
             </div>
         </div>
         <div class="parallax-container">

@@ -16,5 +16,9 @@
 	// Class for when element is pinned
 	.pinned {
 		position: fixed !important;
-	}
+    }
+    
+    .pushpin-container {
+        height: 100%;
+    }
 }

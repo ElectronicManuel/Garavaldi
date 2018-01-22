@@ -2,9 +2,9 @@
     <div class="Protokoll container">
         <h3>Total {{totalZeit}} Stunden Arbeit</h3>
         {{#each arbeiten }}
-            <div class="card-panel hoverable">
+            <div class="card-panel hoverable tooltipped" data-tooltip="{{place.display}}" data-position="bottom">
                 <div class="card-content">
-                    <p class="tooltipped" data-tooltip="{{place.display}}" data-position="left">
+                    <p>
                         <i class="fa fa-{{place.icon}}"></i>
                         {{ datum }}
                     </p>
