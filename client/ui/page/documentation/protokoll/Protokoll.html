@@ -1,8 +1,8 @@
 <template name="Protokoll">
     <div class="Protokoll container">
-        <h4>Total {{totalZeit}} Stunden Arbeit</h4>
+        <h3>Total {{totalZeit}} Stunden Arbeit</h3>
         {{#each arbeiten }}
-            <div class="card">
+            <div class="card-panel hoverable">
                 <div class="card-content">
                     <p class="tooltipped" data-tooltip="{{place.display}}" data-position="left">
                         <i class="fa fa-{{place.icon}}"></i>
@@ -12,24 +12,25 @@
                         <thead>
                             <tr>
                                 <th>Tätigkeit</th>
-                                <th>Aufwand</th>
+                                <th class="hours right">Aufwand</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="row">
                             {{#each actions}}
-                                <tr class="">
+                                <tr>
                                     <td>{{ name }}</td>
-                                    <td>{{ duration }} Stunden</td>
+                                    <td class="hours right">{{ duration }} Stunden</td>
                                 </tr>
                             {{/each}}
                             <tr class="subtotal">
                                 <td>Tagestotal</td>
-                                <td>{{total}} Stunden</td>
+                                <td class="hours right">{{total}} Stunden</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         {{/each}}
+        <a class="btn center-align" id="up"><i class="fa fa-arrow-up right"></i>Hoch</a>
     </div>
 </template>

@@ -2,6 +2,15 @@ Template.Protokoll.onRendered(() => {
     $('.tooltipped').tooltip({ delay: 50 });
 });
 
+Template.Protokoll.events({
+    'click #up': (event) => {
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+    }
+});
+
 class Action {
     constructor(name, duration) {
         this.name = name;
@@ -72,8 +81,14 @@ var arbeiten = [
         new Action("Posts bearbeiten", 1),
         new Action('Formulare aufbessern', 1)
     ]),
-
+    new Workday('21.01.18', home, [
+        new Action('Hosting Anbieter wechseln', 2),
+        new Action('Bugfixes', 1)
+    ]),
     new Workday('22.01.18', home, [
+        new Action('Dokumentation Struktur vorbereiten', 1)
+    ]),
+    new Workday('23.01.18', home, [
         new Action('Eigenen Video-Player designen', 1)
     ])
 ];

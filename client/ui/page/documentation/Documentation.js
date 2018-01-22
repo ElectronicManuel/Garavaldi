@@ -14,9 +14,11 @@ Template.Documentation.onRendered(() => {
     initPushpin();
     $(window).resize(initPushpin);
     $('video').on('canplay', initPushpin);
+    $('img').on('load', initPushpin);
 });
 
 Template.Documentation.onDestroyed(() => {
     $(window).off('resize');
     $('video').off('canplay');
+    $('img').off('load');
 });
