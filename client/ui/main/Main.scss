@@ -41,6 +41,14 @@ main {
 .small {
     font-size: 70%;
 }
+img.center-align {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.margin-bottom {
+    margin-bottom: 2%;
+}
 // Formular Styles
 .btn.submit {
     background-color: $primary-color-dark;
