@@ -1,7 +1,7 @@
 App.info({
     id: 'ch.crosssitefeeding.egalerie',
     name: 'eGalerie',
-    version: "0.0.1"
+    version: "1.0.0"
 });
 
 App.accessRule('https://*.crosssitefeeding.ch');

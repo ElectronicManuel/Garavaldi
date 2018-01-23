@@ -5,7 +5,7 @@ Session.setDefault('sort', {
 
 Meteor.Spinner.options = {
     lines: 8, // The number of lines to draw
-    length: 50, // The length of each line
+    length: 35, // The length of each line
     width: 10, // The line thickness
     radius: 15, // The radius of the inner circle
     corners: 0.7, // Corner roundness (0..1)
