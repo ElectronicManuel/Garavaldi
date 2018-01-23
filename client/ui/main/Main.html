@@ -11,8 +11,10 @@
             {{> NavigationBar }}
         </header>
         <main class="{{#if routeEquals "view" }}postdetail{{/if}}">
+            {{#if disconnected }}
+                <div class="connection red accent-3 white-text center-align">Verbindung verloren - Status: {{ status }}</div>
+            {{/if}}
             {{#if loginLoading }}{{> spinner }}{{/if}}
-
             {{> Template.dynamic template=main}}
         </main>
         <footer class="page-footer">

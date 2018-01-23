@@ -4,6 +4,14 @@ Template.MainLayout.helpers({
     }
 });
 
+Template.registerHelper('disconnected', () => {
+    return !Meteor.status().connected;
+});
+
+Template.registerHelper('status', () => {
+    return Meteor.status().status;
+});
+
 Template.registerHelper('imagesLoaded', () => {
     return Session.get('imagesLoaded');
 });
