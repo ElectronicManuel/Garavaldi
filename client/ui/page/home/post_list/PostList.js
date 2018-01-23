@@ -21,9 +21,6 @@ Template.PostList.helpers({
             searchObject = { $or: [{ title: searchRegex }, { description: searchRegex }, { ownerName: searchRegex }] };
         }
 
-        console.log('Sort: ', actualSort);
-        console.log('Search: ', searchObject);
-
         var toReturn = Posts.find(searchObject, {sort: actualSort});
         $('.tooltipped').tooltip({ delay: 50 });
         return toReturn;

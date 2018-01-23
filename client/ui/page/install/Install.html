@@ -1,11 +1,14 @@
 <Template name="Install">
     <div class="Install container">
         <h1>Downloads</h1>
-
-        {{#each version in versions }}
-            <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}">{{ version.label }}</a>
-        {{else}}
-            <p>Keine Versionen vorhanden</p>
-        {{/each}}
+        <ul>
+            {{#each version in versions }}
+                <li>
+                    <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}">{{ version.label }}</a>
+                </li>
+            {{else}}
+                <li>Keine Versionen vorhanden</li>
+            {{/each}}
+        </ul>
     </div>
 </Template>
