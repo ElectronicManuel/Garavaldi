@@ -5,6 +5,9 @@ Meteor.publish('posts', () => {
 Meteor.publish('images', () => {
     return Images.collection.find({});
 });
+Meteor.publish('versions', () => {
+    return Versions.find({});
+});
 
 Posts.allow({
     insert: (userId, doc) => {
