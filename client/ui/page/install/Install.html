@@ -4,7 +4,7 @@
         <ul>
             {{#each version in versions }}
                 <li>
-                    <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}">{{ version.label }}</a>
+                    <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}">{{ version.label }} - {{dateFormat version.updatedAt}}</a>
                 </li>
             {{else}}
                 <li>Keine Versionen vorhanden</li>
