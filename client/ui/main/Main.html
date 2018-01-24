@@ -12,7 +12,7 @@
         </header>
         <main class="{{#if routeEquals "view" }}postdetail{{/if}}">
             {{#if disconnected }}
-                <div class="connection red accent-4 white-text center-align">Keine Verbindung - Status: {{ status }}</div>
+                <div class="connection red accent-4 white-text center-align">Keine Verbindung - Status: {{ status }}<a id="reconnect" class="btn iconButton right"><i class="material-icons">sync</i></a></div>
             {{/if}}
             {{#if loginLoading }}{{> spinner }}{{/if}}
             {{> Template.dynamic template=main}}

@@ -4,6 +4,14 @@ Template.MainLayout.helpers({
     }
 });
 
+Template.MainLayout.events({
+    'click #reconnect': (event) => {
+        event.preventDefault();
+        Meteor.reconnect();
+    }
+});
+
+// Allgemeine Helfer
 Template.registerHelper('disconnected', () => {
     return !Meteor.status().connected;
 });
