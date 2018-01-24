@@ -1,10 +1,11 @@
 <Template name="Install">
     <div class="Install container">
         <h1>Downloads</h1>
+        <h2>Android</h2>
         <ul>
             {{#each version in versions }}
                 <li>
-                    <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}">{{ version.label }} - {{dateFormat version.updatedAt}}</a>
+                    <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}" onclick="event.preventDefault();window.open('https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}', '_system');">{{ version.label }} - {{dateFormat version.updatedAt}}</a>
                 </li>
             {{else}}
                 <li>Keine Versionen vorhanden</li>
