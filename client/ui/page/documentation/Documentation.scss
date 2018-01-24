@@ -27,6 +27,11 @@
 	.pinned {
 		position: fixed !important;
     }
+
+    // Zeige Navigationsleiste garantiert als oberstes Element in der Z-Achse an
+    .pushpin-docu-nav {
+        z-index: 100000000000000000000;
+    }
     
     .pushpin-container {
         height: 100%;

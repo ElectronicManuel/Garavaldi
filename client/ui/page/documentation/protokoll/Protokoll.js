@@ -88,7 +88,12 @@ var arbeiten = [
         new Action('Dokumentation Struktur vorbereiten', 1)
     ]),
     new Workday('23.01.18', home, [
-        new Action('Eigenen Video-Player designen', 1)
+        new Action('Android App entwickeln', 2)
+    ]),
+    new Workday('24.01.18', home, [
+        new Action('Anleitungsvideo erstellen', 1),
+        new Action('404-Bilder erstellen', 1),
+        new Action('Dokumentation schreiben', 2)
     ])
 ];
 
