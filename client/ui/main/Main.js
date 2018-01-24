@@ -21,8 +21,7 @@ Template.registerHelper('routeEquals', (routeName) => {
 });
 
 Template.registerHelper('postSince', () => {
-    moment.locale('de');
-    return moment(Template.currentData().post.createdAt).fromNow();
+    return momentReactive(Template.currentData().post.createdAt).fromNow();
 });
 
 Template.registerHelper('postLink', () => {

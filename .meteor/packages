@@ -31,7 +31,6 @@ meteortoys:allthings
 service-configuration
 aldeed:collection2
 aldeed:autoform
-momentjs:moment
 ostrio:files
 ostrio:autoform-files
 cleandersonlobo:sweetalert2
@@ -42,3 +41,5 @@ sacha:spin
 fortawesome:fontawesome
 gildaspk:autoform-materialize
 hedcet:cordova-google-plus-native-sign-in
+panter:moment-reactive
+momentjs:moment
