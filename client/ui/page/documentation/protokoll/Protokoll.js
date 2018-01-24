@@ -1,5 +1,4 @@
 Template.Protokoll.onRendered(() => {
-    $('.tooltipped').tooltip({ delay: 50 });
 });
 
 Template.Protokoll.events({

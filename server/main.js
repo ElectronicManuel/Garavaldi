@@ -1,5 +1,8 @@
-import { Meteor } from 'meteor/meteor';
+/*
+ * Diese Datei konfiguriert allgemeine, Server-seitige Einstellungen
+ */
 
+// Google-Auth konfigurieren 
 Meteor.startup(() => {
     // code to run on server at startup
     ServiceConfiguration.configurations.remove({

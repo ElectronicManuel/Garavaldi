@@ -1,4 +1,5 @@
 function initPushpin() {
+    // Code für http://materializecss.com/pushpin.html
     $('.pushpin-docu-nav').pushpin('remove');
     $('.pushpin-docu-nav').each(function () {
         var $this = $(this);

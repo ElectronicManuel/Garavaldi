@@ -1,3 +1,7 @@
+/*
+ * Diese Datei publiziert Datenbankeinträge an den Client
+ */
+
 Meteor.publish('posts', () => {
     return Posts.find({ $or: [{private: false}, {owner: Meteor.userId() }] });
 });
