@@ -1,3 +1,4 @@
+<!-- Dieser Header wird in alle Subseiten importiert -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,7 +15,9 @@
             {{#if disconnected }}
                 <div class="connection red accent-4 white-text center-align">Keine Verbindung - Status: {{ status }}<a id="reconnect" class="btn iconButton right"><i class="material-icons">sync</i></a></div>
             {{/if}}
-            {{#if loginLoading }}{{> spinner }}{{/if}}
+            {{#if loginLoading }}
+                {{> spinner }}
+            {{/if}}
             {{> Template.dynamic template=main}}
         </main>
         <footer class="page-footer">

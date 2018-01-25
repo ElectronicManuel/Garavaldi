@@ -1,11 +1,13 @@
 Template.PostList.helpers({
     posts: () => {
+        // Suche alle Posts und sortiere nach den Einstellungen des Benutzers
+        
         var sortObject = Session.get('sort');
         var actualSort = {};
 
         for (var key in sortObject) {
             if (sortObject.hasOwnProperty(key)) {
-                var setting = sortObject[key]; // Since dynamic, use []
+                var setting = sortObject[key];
                 if (setting != 0) {
                     actualSort[key] = setting;
                 }

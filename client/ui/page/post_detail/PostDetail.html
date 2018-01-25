@@ -8,21 +8,24 @@
         <div class="metasection row">
             <div class="container">
                 {{#if postIsOwner }}
-                <div class="postManagement">
-                    <button class="btn-large red tooltipped delete" data-tooltip="Bild löschen">
-                        <i class="large material-icons white-text">delete_forever</i>
-                    </button>
-                    <button class="btn-large tooltipped changelock {{#if post.private}}private_false{{else}}private_true{{/if}}" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
-                        <i class="large material-icons white-text">{{#if post.private}}lock_open{{else}}lock_outline{{/if}}</i>
-                    </button>
-                    <button class="btn-large orange tooltipped modal-trigger edit" data-tooltip="Bearbeiten" data-target="edit_dialog">
-                        <i class="large material-icons white-text">edit</i>
-                    </button>
-                </div>
-                {{> UpdatePostForm post=post }} {{/if}}
+                    <div class="postManagement">
+                        <button class="btn-large red tooltipped delete" data-tooltip="Bild löschen">
+                            <i class="large material-icons white-text">delete_forever</i>
+                        </button>
+                        <button class="btn-large tooltipped changelock {{#if post.private}}private_false{{else}}private_true{{/if}}" data-tooltip="{{#if post.private}}Veröffentlichen{{else}}Auf privat stellen{{/if}}">
+                            <i class="large material-icons white-text">{{#if post.private}}lock_open{{else}}lock_outline{{/if}}</i>
+                        </button>
+                        <button class="btn-large orange tooltipped modal-trigger edit" data-tooltip="Bearbeiten" data-target="edit_dialog">
+                            <i class="large material-icons white-text">edit</i>
+                        </button>
+                    </div>
+                    {{> UpdatePostForm post=post }}
+                {{/if}}
                 <h1 class="col s12">
-                    {{ post.title }} {{#if post.private }}
-                    <i class="medium material-icons right private_true-text">lock_outline</i>{{/if}}
+                    {{ post.title }}
+                    {{#if post.private }}
+                        <i class="medium material-icons right private_true-text">lock_outline</i>
+                    {{/if}}
                 </h1>
                 <div class="col s8">
                     <span class="grey-text small truncate">von {{ post.ownerName }}</span>
@@ -44,8 +47,6 @@
 
 <template name="UpdatePostForm">
     <div id="edit_dialog" class="modal">
-
-
         {{#autoForm collection="Posts" doc=post id="updatePostForm" type="update" }}
 
         <div class="modal-content">
@@ -60,6 +61,5 @@
         </div>
 
         {{/autoForm}}
-
     </div>
 </template>

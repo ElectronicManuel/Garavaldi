@@ -5,6 +5,7 @@
         <ul>
             {{#each version in versions }}
                 <li>
+                    <!-- Das Klick Event wird überschrieben, damit der Link auch in der Android App funktioniert -->
                     <a href="https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}" onclick="event.preventDefault();window.open('https://files.crosssitefeeding.ch/garavaldi/{{version.filename}}', '_system');">{{ version.label }} - {{dateFormat version.updatedAt}}</a>
                 </li>
             {{else}}

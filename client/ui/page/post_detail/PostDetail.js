@@ -62,7 +62,7 @@ Template.PostDetail.events({
     },
     'click .likeBtn': (e) => {
         var postId = Template.currentData().post._id;
-        
+
         var hasLiked = false;
         var post = Template.currentData().post;
         if (post && post.likes) {

@@ -1,14 +1,9 @@
+// Hier werden die Standardwerte von Materialize überschrieben um die Webseite blau zu gestalten
+
 @import "{}/imports/materialize/sass/components/color";
-//@import "{}/node_modules/materialize-css/sass/components/color";
 
 $primary-color: color("blue", "lighten-2");
-//$primary-color-light: lighten($primary-color, 15%);
-//$primary-color-dark: darken($primary-color, 15%);
 
 $secondary-color: color("indigo", "accent-4");
-//$success-color: color("green", "base");
-//$error-color: color("red", "base");
-//$link-color: color("light-blue", "darken-1");
 
 @import "{}/imports/materialize/sass/materialize";
-//@import "{}/node_modules/materialize-css/sass/materialize";

@@ -1,14 +1,14 @@
 var settingsBarHelpers = {
     isCaller: (callerName) => {
         var caller = Template.currentData().caller
-        if(caller == undefined) {
+        if (caller == undefined) {
             caller = Template.parentData().caller;
         }
-        return  caller == callerName;
+        return caller == callerName;
     },
     caller: () => {
         var caller = Template.currentData().caller
-        if(caller == undefined) {
+        if (caller == undefined) {
             caller = Template.parentData().caller;
         }
         return caller;
@@ -39,13 +39,13 @@ var singleSettingEvents = {
         var sortObject = Session.get('sort');
         var sortSetting = sortObject[sortName];
 
-        if(sortSetting == 0) {
+        if (sortSetting == 0) {
             sortSetting = -1;
         }
-        else if(sortSetting == -1) {
+        else if (sortSetting == -1) {
             sortSetting = 1;
         }
-        else if(sortSetting == 1) {
+        else if (sortSetting == 1) {
             sortSetting = 0;
         }
 
