@@ -1,6 +1,25 @@
 <template name="Protokoll">
     <div class="Protokoll container">
-        <h3>Total {{totalZeit}} Stunden Arbeit</h3>
+        <h1>Aufwand</h1>
+
+        <div class="card-panel hoverable">
+            <div class="card-content">
+                <p>Im Konzept habe ich mit einem Aufwand von 45 Stunden (40 für Entwicklung und 5 für Testing) geplant.</p>
+                <blockquote>
+                    45 Stunden Aufwand werde ich nicht in 24 Lektionen in der Schule erledigen können. Ich werde auch Zuhause daran arbeiten müssen.
+                </blockquote>
+                <p>
+                    Mein effektiver Aufwand betrug {{totalZeit}} Stunden.
+                    <br />
+                    Da ich abwechselnd entwickelte und testete, ist in dieser Zahl beides zusammengeführt.
+                </p>
+                <p>Meine Schätzung von 45 Stunden war sehr genau, da ich um weniger als 2 Stunden daneben lag.</p>
+            </div>
+        </div>
+
+        
+
+        <h1>Arbeitsprotokoll</h1>
         {{#each arbeiten }}
             <div class="card-panel hoverable">
                 <div class="card-content">

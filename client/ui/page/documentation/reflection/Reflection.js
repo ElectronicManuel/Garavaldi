@@ -11,14 +11,11 @@ class Question {
 }
 
 var questions = [
-    new Question('Was habe ich gelernt?', 'lightbulb_outline', 'Reesponse'),
-    new Question('Welche Folgerungen für das Fach kann ziehen?', 'speaker_notes', 'Reesponse'),
-    new Question('Welche Methoden habe ich gewählt?', 'call_split', 'Reesponse'),
-    new Question('Was hat mir gefallen, was nicht?', 'thumbs_up_down', 'Reesponse'),
-    new Question('Was half mir beim lernen, was nicht?', 'library_books', 'Reesponse'),
-    new Question('Was gelang mir gut?', 'thumb_up', 'Reesponse'),
-    new Question('Was kann ich jetzt gut oder besser?', 'star_border', 'Reesponse'),
-    new Question('Woran will ich das nächste Mal denken?', 'healing', 'Reesponse')
+    new Question('Was habe ich gelernt?', 'lightbulb_outline', 'Ich habe gelernt eine Webapplikation mit Meteor zu entwickeln, auf verschiedenen Bildschirmgrössen responsive darzustellen und als Android App zu verpacken.'),
+    new Question('Was hat mir gefallen, was nicht?', 'thumbs_up_down', 'Das Entwickeln mit Meteor hat mir gefallen. Vor allem die Möglichkeit, Dateien irgendwo im Projekt zu speichern und automatisch in die Webseite einzubinden. Nicht gefallen haben mir die CSS Probleme mit MaterializeCSS, die oft auftraten.'),
+    new Question('Was gelang mir gut?', 'thumb_up', 'Ich habe noch zu erledigende Dinge in GitHub gespeichert und priorisiert, deshalb konnte ich mich auf die wichtigen Arbeiten fokusieren. Auch habe ich meinen Quellcode nach Thema (Alle Dateien zur Dokumentation in einen Ordner) und nicht nach Dateityp (Alle HTML, CSS und JS Dateien getrennt speichern) verpackt. Das vereinfachte die Entwicklung ungemein.'),
+    new Question('Was kann ich jetzt gut oder besser?', 'star_border', 'Ich kann jetzt ein Projekt besser strukturieren und planen. Ich habe gelernt wie man eine Echtzeit-Applikation mit Meteor entwickelt. Ausserdem weiss ich jetzt, was es braucht um eine Webseite responsiv zu gestalten.'),
+    new Question('Woran will ich das nächste Mal denken?', 'healing', 'Beim nächsten Projekt denke ich daran, Anforderungen zu Beginn klar zu definieren und zu priorisieren.')
 ];
 
 Template.Reflection.helpers({

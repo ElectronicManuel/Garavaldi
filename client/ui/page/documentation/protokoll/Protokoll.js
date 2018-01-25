@@ -94,6 +94,9 @@ var arbeiten = [
         new Action('Anleitungsvideo erstellen', 1),
         new Action('404-Bilder erstellen', 1),
         new Action('Dokumentation schreiben', 2)
+    ]),
+    new Workday('25.01.18', home, [
+        new Action('Dokumentation schreiben', 1)
     ])
 ];
 
