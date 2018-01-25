@@ -1,8 +1,11 @@
+// Hier werden Clientseitige Standardwerde definiert
+
 Session.setDefault('sort', {
     createdAt: -1,
     likeCount: 0
 });
 
+// Lade Animation definieren, aus der Doku kopiert
 Meteor.Spinner.options = {
     lines: 8, // The number of lines to draw
     length: 35, // The length of each line
