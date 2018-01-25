@@ -1,22 +1,17 @@
 <Template name="Reflection">
     <div class="Reflection">
-        <div class="parallax-container">
-            <div class="parallax">
-                <img src="https://files.crosssitefeeding.ch/garavaldi/docu_background5.jpg">
-            </div>
-        </div>
-        <div class="section white">
+        <div class="section">
             <div class="row container">
                 <h1 class="header">Reflexion</h1>
-                <p class="grey-text text-darken-3 lighten-3">
+                <p>
                     Reflexion
                 </p>
-                <ul class="collapsible popout" data-collapsible="accordion">
+                <ul class="collapsible popout black-text" data-collapsible="accordion">
                     {{#each questions}}
                         <li>
                             <div class="collapsible-header popout {{#if zero @index}}active{{/if}}">
                                 <i class="material-icons">{{icon}}</i>{{question}}</div>
-                            <div class="collapsible-body">
+                            <div class="collapsible-body white">
                                 <span>
                                     {{response}}
                                 </span>
@@ -24,11 +19,6 @@
                         </li>
                     {{/each}}
                 </ul>
-            </div>
-        </div>
-        <div class="parallax-container">
-            <div class="parallax">
-                <img src="https://files.crosssitefeeding.ch/garavaldi/docu_background6.jpg">
             </div>
         </div>
     </div>

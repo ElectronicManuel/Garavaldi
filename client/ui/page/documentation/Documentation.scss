@@ -1,10 +1,33 @@
 .Documentation {
 
+    // Hintergründe von https://uigradients.com/
+
+    #tutorial {
+        background: #EF3B36;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #FFFFFF, #EF3B36);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #FFFFFF, #EF3B36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    #goals {
+        color: white;
+        
+        background: #E53935;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, rgb(28, 81, 160), #E53935);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, rgb(28, 81, 160), #E53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    #reflexion {
+        color: white;
+
+        background: #24C6DC;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, rgb(28, 81, 160), #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, rgb(28, 81, 160), #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
     #protocol {
-        // Code von https://uigradients.com/#KingYna
-        background: #1a2a6c;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #348F50;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #24C6DC, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #24C6DC, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
 

@@ -1,5 +1,4 @@
 Template.Reflection.onRendered(() => {
-    $('.parallax').parallax();
     $('.collapsible').collapsible();
 });
 
